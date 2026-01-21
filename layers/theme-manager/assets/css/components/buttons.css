@@ -1,0 +1,54 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/buttons.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 10
+ * @createTime: 19:51
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251110-19:51
+ * Initial creation and release of buttons.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Button Components
+   * ============================================================================
+   */
+
+  /* .btn is the BASE class for all buttons */
+  .btn {
+    @apply rounded-lg py-3 px-5 transition duration-150 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  /* .btn-primary is the MODIFIER class */
+  .btn-primary {
+    /* These are ONLY the primary-specific styles. */
+    @apply bg-fill-primary-default text-pen-base-default;
+    @apply border border-edge-primary-default;
+    @apply shadow-lg shadow-fill-primary-shadow;
+
+    /* States */
+    @apply hover:bg-fill-primary-hover hover:border-edge-primary-hover;
+    @apply active:bg-fill-primary-active active:border-edge-primary-active;
+    @apply disabled:bg-fill-base-disabled disabled:text-pen-base-disabled;
+
+    /* Focus Ring */
+    @apply focus:ring-fill-primary-default;
+  }
+}
