@@ -76,19 +76,8 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   icons: {
-    /* optional defaults */
-    // size: '24',
-    // class: 'inline-block',
-
-    // serverBundle: 'remote',
-    // autoInstall: false,
-    // collections: {}
-
-
-    serverBundle: 'remote',
     provider: 'iconify',
-    // Or specify exactly which collections to include locally
-    localApiEndpoint: '/api/_nuxt_icon',
+    serverBundle: false
   },
 
   /**
