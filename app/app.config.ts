@@ -23,15 +23,7 @@
  * ================================================================================
  */
 
-export default defineAppConfig({
-	icon: {
-		//mode: 'css',
-		//cssLayer: 'base',
-
-    mode: 'svg',
-    //serverBundle: 'remote'
-	}
-})
+export default defineAppConfig({})
 
 
 

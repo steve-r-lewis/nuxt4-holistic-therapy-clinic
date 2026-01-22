@@ -50,7 +50,11 @@ export default defineNuxtConfig({
    */
   modules: [
     '@pinia/nuxt',
-    '@nuxt/icon',
+    '@nuxt/icon', {
+      serverBundle: 'remote',
+      autoInstall: false,
+      collections: {}
+    }
   ],
 
   /**
@@ -75,15 +79,15 @@ export default defineNuxtConfig({
    * @NUXT-ICONS-CONFIGURATION:
    * ------------------------------------------------------------------------------
    */
-  icons: {
-    /* optional defaults */
-    size: '24',
-    class: 'inline-block',
-
-    serverBundle: 'remote',
-    autoInstall: false,
-    collections: {}
-  },
+  // icons: {
+  //   /* optional defaults */
+  //   size: '24',
+  //   class: 'inline-block',
+  //
+  //   serverBundle: 'remote',
+  //   autoInstall: false,
+  //   collections: {}
+  // },
 
   /**
    * ------------------------------------------------------------------------------
