@@ -50,11 +50,7 @@ export default defineNuxtConfig({
    */
   modules: [
     '@pinia/nuxt',
-    '@nuxt/icon', {
-      serverBundle: 'remote',
-      autoInstall: false,
-      collections: {}
-    }
+    '@nuxt/icon'
   ],
 
   /**
