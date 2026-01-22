@@ -151,7 +151,7 @@
 
 # Specific file exclusions
 # Temporary exclude to ensure that private data does not pollute the Git repository[cite: 16].
-nuxt.config.ts
+# nuxt.config.ts
 
 # ---
 
