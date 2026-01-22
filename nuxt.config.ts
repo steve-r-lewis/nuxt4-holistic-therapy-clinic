@@ -75,9 +75,10 @@ export default defineNuxtConfig({
    * @NUXT-ICONS-CONFIGURATION:
    * ------------------------------------------------------------------------------
    */
-  icons: {
+  icon: {
     provider: 'iconify',
-    serverBundle: false
+    serverBundle: false,
+    collections: [] // explicitly prevent auto-discovery
   },
 
   /**
