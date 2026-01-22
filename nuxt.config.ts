@@ -76,8 +76,10 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   icon: {
+    size: '24',
+    class: 'inline-block',
+    serverBundle: 'remote',
     provider: 'iconify',
-    serverBundle: false,
     collections: [] // explicitly prevent auto-discovery
   },
 
