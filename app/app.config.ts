@@ -24,11 +24,6 @@
  */
 
 export default defineAppConfig({
-  icon: {
-    mode: 'svg',           // Use SVG icons
-    serverBundle: 'remote', // Load icons on-demand from remote bundle
-    autoInstall: false       // Prevent auto-install prompts
-  }
 })
 
 
