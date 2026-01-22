@@ -80,8 +80,8 @@ export default defineNuxtConfig({
     size: '24',
     class: 'inline-block',
 
-    // ✅ Change to 'local' to enable tree-shaking (only bundle used icons)
-    serverBundle: 'auto'
+    // ✅ Fetch icons on-demand (Tiny bundle size)
+    serverBundle: 'remote'
   },
 
   /**
