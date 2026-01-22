@@ -69,7 +69,6 @@ export default defineNuxtConfig({
   imports: {
   },
 
-
   /**
    * ------------------------------------------------------------------------------
    * @NUXT-ICONS-CONFIGURATION:
@@ -78,6 +77,7 @@ export default defineNuxtConfig({
   icon: {
     size: '24',
     class: 'inline-block',
+	
     serverBundle: 'remote',
     provider: 'iconify',
     collections: [] // explicitly prevent auto-discovery
