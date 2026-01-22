@@ -81,7 +81,8 @@ export default defineNuxtConfig({
     class: 'inline-block',
 
     // ✅ Fetch icons on-demand (Tiny bundle size)
-    serverBundle: 'remote'
+    serverBundle: 'remote',
+    collections: {}
   },
 
   /**

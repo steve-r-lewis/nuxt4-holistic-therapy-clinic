@@ -29,7 +29,7 @@ export default defineAppConfig({
 		//cssLayer: 'base',
 
     mode: 'svg',
-    serverBundle: 'remote'
+    //serverBundle: 'remote'
 	}
 })
 

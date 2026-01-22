@@ -1,6 +1,6 @@
 {
   "name": "nuxt4-holistic-therapy-clinic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A template Nuxt 4 monorepo using Nuxt Layers / Nitro / Vite",
   "private": true,
   "main": "nuxt.config.ts",
