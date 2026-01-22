@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     class: 'inline-block',
 
     // ✅ Change to 'local' to enable tree-shaking (only bundle used icons)
-    serverBundle: 'local'
+    serverBundle: 'auto'
   },
 
   /**
