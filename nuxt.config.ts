@@ -69,51 +69,20 @@ export default defineNuxtConfig({
   imports: {
   },
 
-  /**
-   * ------------------------------------------------------------------------------
-   * @OPTIONAL: alias for layer
-   * ------------------------------------------------------------------------------
-   */
-  alias: {
-  },
 
   /**
-   * @NIXT-ICONS-CONFIGURATION:
+   * ------------------------------------------------------------------------------
+   * @NUXT-ICONS-CONFIGURATION:
+   * ------------------------------------------------------------------------------
    */
   icons: {
     /* optional defaults */
     size: '24',
     class: 'inline-block',
 
-    serverBundle: {
-      collections: [
-        'uil',
-        'lucide',
-        'fa',
-      ]
-    }
+    // ✅ Change to 'local' to enable tree-shaking (only bundle used icons)
+    serverBundle: 'local'
   },
-
-  /**
-   * ------------------------------------------------------------------------------
-   * @APP-CONFIGURATION:
-   * ------------------------------------------------------------------------------
-   */
-  // app: {
-  //   head: {
-  // link: [
-  //   {
-  //     rel: 'preload',
-  //     href: '/_nuxt/assets/css/main.css',
-  //     as: 'style'
-  //   },
-  //   {
-  //     rel: 'stylesheet',
-  //     href: '/_nuxt/assets/css/main.css'
-  //   }
-  // ]
-  //   }
-  // },
 
   /**
    * ------------------------------------------------------------------------------
@@ -121,6 +90,12 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   alias: {
+  },
+
+  // Disable sourcemaps for server and client
+  sourcemap: {
+    server: false,
+    client: false
   },
 
   /**
@@ -162,6 +137,27 @@ export default defineNuxtConfig({
     //dev: true,  // Ensure Nitro HMR is active
     preset: 'netlify'
   },
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @APP-CONFIGURATION:
+   * ------------------------------------------------------------------------------
+   */
+  // app: {
+  //   head: {
+  // link: [
+  //   {
+  //     rel: 'preload',
+  //     href: '/_nuxt/assets/css/main.css',
+  //     as: 'style'
+  //   },
+  //   {
+  //     rel: 'stylesheet',
+  //     href: '/_nuxt/assets/css/main.css'
+  //   }
+  // ]
+  //   }
+  // },
 
   /**
    * ------------------------------------------------------------------------------
