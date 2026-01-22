@@ -159,7 +159,8 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   nitro: {
-    dev: true,  // Ensure Nitro HMR is active
+    //dev: true,  // Ensure Nitro HMR is active
+    preset: 'netlify'
   },
 
   /**
