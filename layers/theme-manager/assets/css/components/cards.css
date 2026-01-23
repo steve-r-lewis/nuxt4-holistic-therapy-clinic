@@ -1,0 +1,69 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/cards.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 11
+ * @createTime: 23:18
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251111-23:18
+ * Initial creation and release of cards.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Card Components
+   * ============================================================================
+   */
+
+  /* Base card styles */
+  .card {
+    @apply bg-fill-base-default text-pen-base-default;
+    @apply shadow-md-base transition;
+    @apply hover:shadow-lg-base;
+  }
+
+  /* Modifier for CardWidgetType001 */
+  .card-widget-01 {
+    /*@apply card;*/
+    /* REMOVED: @apply card; */
+    @apply rounded-xl p-6 flex flex-col items-center;
+  }
+
+  /* Modifier for CardWidgetType002 */
+  .card-widget-02 {
+    /* REMOVED: @apply card; */
+    @apply rounded-2xl p-8;
+    @apply transform hover:-translate-y-1;
+  }
+
+  /* (The rest of the file is correct) */
+  .card-icon-wrapper {
+    @apply w-16 h-16 mb-4 flex items-center justify-center rounded-full;
+    @apply bg-fill-tertiary-default text-pen-primary-default;
+  }
+  .card-icon {
+    @apply w-8 h-8;
+  }
+  .card-title {
+    @apply text-xl font-semibold mb-2;
+    @apply text-pen-primary-default;
+  }
+  .card-description {
+    @apply text-pen-muted-default;
+  }
+}

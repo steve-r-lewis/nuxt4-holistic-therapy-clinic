@@ -1,0 +1,80 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/sections.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 11
+ * @createTime: 23:34
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251111-23:34
+ * Initial creation and release of sections.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Page Section Components
+   * ============================================================================
+   */
+  .page-section {
+    @apply py-20;
+
+    /* Responsive padding */
+    @apply px-4; /* Mobile-first */
+    @apply md:px-6;
+  }
+
+  /* A section with the 'tertiary' (grey) fill */
+  .page-section-tertiary {
+    @apply bg-fill-tertiary-default text-pen-base-default;
+  }
+
+  /* A section with the 'base' (white) fill */
+  .page-section-base {
+    @apply bg-fill-base-default text-pen-base-default;
+  }
+
+  /**
+   * ============================================================================
+   * Section Header Components (For SectionHeader.vue)
+   * ============================================================================
+   */
+  .section-header {
+    @apply text-center;
+  }
+
+  .section-title {
+    @apply font-bold;
+
+    /* Replaces 'text-gray-800' */
+    @apply text-pen-base-default;
+
+    /* Responsive text sizing */
+    @apply text-3xl; /* Mobile-first */
+    @apply md:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-2;
+
+    /* Replaces 'text-gray-600' */
+    @apply text-pen-muted-default;
+
+    /* Responsive text sizing */
+    @apply text-base; /* Mobile-first */
+    @apply md:text-lg;
+  }
+}

@@ -1,0 +1,92 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/navbars.css
+ * @version:    2.2.0
+ * @createDate: 2025 Nov 11
+ * @createTime: 23:09
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * Styles for the main desktop navigation bar.
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V2.2.0, 20251115-11:15
+ * - Added to '.navbar-container .navbar-account-widget-dropdown' rule.
+ * - This provides the default DESKTOP positioning (top-full, mt-2)
+ * which was removed from the component to fix specificity.
+ *
+ * V2.1.0, 20251115-02:30
+ * - Added '.navbar-container .navbar-account-widget-dropdown' rule.
+ * - This re-applies the 'z-50' and 'overflow-hidden' for the
+ * desktop view, which was removed from the component file.
+ *
+ * V2.0.0, 20251115-00:30
+ * - MAJOR REFACTOR.
+ * - Removed all .navbar-drawer- and .sidebar-footer-
+ * overrides.
+ * - All mobile drawer styling is now handled by 'sidebar.css'
+ * via the new <AppSidebar> component.
+ *
+ * V1.2.1, 20251115-01:15
+ * Added .sidebar-footer .navbar-account-widget-dropdown override
+ * to make the dropdown open *upwards* (bottom-full) on mobile.
+ *
+ * V1.2.0, 20251115-01:05
+ * Added .sidebar-footer .navbar-account-widget-root override
+ * to fix widget styling inside the mobile drawer.
+ *
+ * V1.0.1, 20251114-20:25
+ * Added .navbar-link-mobile styles for responsive drawer menu.
+ *
+ * V1.0.0, 20251111-23:09
+ * Initial creation and release of navbars.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Navbar Components (Desktop)
+   * ============================================================================
+   */
+  .navbar {
+    @apply sticky top-0 z-50 w-full;
+    @apply bg-fill-primary-default/90 backdrop-blur-md;
+    @apply shadow-md-base;
+  }
+  .navbar-container {
+    @apply max-w-7xl mx-auto flex items-center justify-between px-6 py-4;
+  }
+  .navbar-brand {
+    @apply text-xl font-semibold text-pen-base-default;
+    @apply transition hover:opacity-75;
+  }
+  .navbar-links {
+    @apply flex space-x-6;
+  }
+  .navbar-link {
+    @apply text-pen-base-default font-medium transition;
+    @apply hover:text-pen-primary-default;
+  }
+  .navbar-link.router-link-active,
+  .navbar-link.is-selected {
+    @apply text-pen-primary-selected;
+  }
+
+  /**
+   * NEW: Styling for the dropdown in the DESKTOP navbar
+   */
+  .navbar-container .navbar-account-widget-dropdown {
+    @apply top-full mt-2;
+    @apply z-50;
+    @apply overflow-hidden;
+  }
+}

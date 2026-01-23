@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   icon: {
     size: '24',
     class: 'inline-block',
-	
+
     serverBundle: 'remote',
     provider: 'iconify',
     collections: [] // explicitly prevent auto-discovery
@@ -147,12 +147,12 @@ export default defineNuxtConfig({
   // link: [
   //   {
   //     rel: 'preload',
-  //     href: '/_nuxt/assets/css/main.css',
+  //     href: '/_nuxt/assets/css/main.css.old',
   //     as: 'style'
   //   },
   //   {
   //     rel: 'stylesheet',
-  //     href: '/_nuxt/assets/css/main.css'
+  //     href: '/_nuxt/assets/css/main.css.old'
   //   }
   // ]
   //   }

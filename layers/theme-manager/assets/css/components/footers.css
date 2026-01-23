@@ -1,0 +1,60 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/footers.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 11
+ * @createTime: 23:51
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251111-23:51
+ * Initial creation and release of footers.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Footer Components (For SectionFooter.vue)
+   * ============================================================================
+   */
+
+  /* This is the main footer container class */
+  .page-footer {
+    @apply bg-fill-primary-default text-pen-base-default;
+    @apply border-t border-edge-base-default;
+    @apply py-8 px-6 text-center;
+  }
+
+  .page-footer-copyright {
+    /* Replaces 'text-red-500' */
+    /* We'll use a slightly muted text for the copyright */
+    @apply text-pen-muted-default;
+    @apply text-sm;
+  }
+
+  .page-footer-tagline {
+    /* For the second <p> tag */
+    @apply text-pen-base-default text-sm mt-1;
+  }
+
+  .page-footer-links {
+    @apply mt-4 flex justify-center space-x-4;
+  }
+
+  .page-footer-link {
+    @apply text-sm text-pen-base-default;
+    @apply transition hover:opacity-75;
+  }
+}

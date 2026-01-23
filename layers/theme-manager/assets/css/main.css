@@ -1,11 +1,11 @@
 /**
  * ================================================================================
  *
- * @project:    uuidv7-generator
+ * @project:    @monorepo/theme-manager
  * @file:       ~/layers/theme-manager/assets/css/main.css
  * @version:    1.0.0
- * @createDate: 2025 Dec 13
- * @createTime: 18:21
+ * @createDate: 2025 Oct 19
+ * @createTime: 20:52
  * @author:     Steve R Lewis
  *
  * ================================================================================
@@ -29,7 +29,7 @@
  *
  * @notes: Revision History
  *
- * V1.0.0, 20251213-18:21
+ * V1.0.0, 20251019-20:52
  * Initial creation and release of main.css
  *
  * ================================================================================
@@ -42,23 +42,41 @@
 @source "../../../ui-library/**/*.{vue,js,ts,jsx,tsx}";
 
 /**
+ * STEP 1: Load Tailwind's foundational styles.
  * This includes base element resets, component classes, and all default utilities.
  */
 @import 'tailwindcss';
 
 /**
+ * STEP 2: Load the theme's CSS variables.
+ * - `theme-default.css` provides a fallback theme (e.g., "Spring")
+ * - `theme-api.css` maps those theme colors to semantic tokens (e.g., --ui-background-base)
+ */
+@import './theme/theme-default.css';
+@import './theme/theme-api.css';
+
+/**
+ * STEP 3: Load our custom Tailwind configuration.
+ * This file tells Tailwind to generate new `ui-*` utility classes based on the
+ * CSS variables defined in `theme-api.css`.
+ */
+@import './tailwindcss/tailwind-config.css';
+
+/**
+ * STEP 4: Load custom component styles.
  * This file contains classes like `.card` and `.btn-primary` that are built
  * using the `ui-*` tokens, making them theme-aware.
  */
 @import './components/components.css';
 
 /**
+ * STEP 5: Define custom utilities.
  * Reusable utility for hiding scrollbars across browsers
  */
 @utility scrollbar-hide {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	&::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
+	}
 }

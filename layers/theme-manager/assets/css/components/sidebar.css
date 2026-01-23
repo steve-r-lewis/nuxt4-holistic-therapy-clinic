@@ -1,0 +1,131 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/sidebar.css
+ * @version:    2.0.0
+ * @createDate: 2025 Nov 13
+ * @createTime: 21:28
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V2.0.0, 20251115-00:30
+ * - MAJOR REFACTOR.
+ * - Renamed all classes from .nav-sidebar to .sidebar
+ * to target the new <AppSidebar> component.
+ * - Moved all layout, responsive, and animation logic here.
+ * - Sidebar is now mobile-first ('w-full max-w-sm')
+ * and snaps to 'lg:w-64' on desktop.
+ * - Added 'overflow-visible' and 'z-[60]' fixes for the
+ * account widget dropdown, scoped to the footer.
+ *
+ * V1.0.1, 20251114-21:35
+ * Changed 'w-64' to 'lg:w-64' to allow responsive mobile width
+ * (w-full max-w-sm) to be applied from the layout.
+ *
+ * V1.0.0, 20251113-21:28
+ * Initial creation and release of sidebar.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * App Sidebar Components
+   * ============================================================================
+   */
+
+  /*
+   * The main sidebar container
+   * This handles layout, responsiveness, and animation.
+   */
+  .sidebar {
+    /* Structure & Sizing */
+    @apply flex flex-col;
+    @apply w-full max-w-sm; /* Mobile-first: "gap" effect */
+    @apply lg:w-64;         /* Desktop: Snap to 'w-64' */
+
+    /* Positioning (for mobile drawer) */
+    @apply fixed inset-y-0 left-0 z-50;
+    @apply transition-transform duration-300 ease-in-out;
+
+    /* Desktop Positioning Override */
+    @apply lg:static lg:translate-x-0;
+
+    /* Theme */
+    @apply bg-fill-base-default text-pen-base-default;
+    @apply border-r border-edge-base-default;
+
+    /* FIX: Prevent dropdown clipping */
+    @apply overflow-visible;
+  }
+
+  /* Header area of the sidebar */
+  .sidebar-header {
+    @apply h-16 flex items-center justify-between px-6;
+    @apply border-b border-edge-base-default;
+    @apply shrink-0; /* Prevent header from shrinking */
+  }
+
+  /* Container for the navigation list */
+  .sidebar-nav {
+    @apply flex-1 overflow-y-auto py-4;
+    @apply flex flex-col gap-1 px-3;
+  }
+
+  /*
+   * Individual Sidebar Links
+   * This single class will be used by both sidebars.
+   */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg;
+    @apply text-sm font-medium transition-colors duration-200;
+    @apply text-pen-muted-default;
+    @apply hover:bg-fill-base-hover hover:text-pen-base-default;
+  }
+
+  .sidebar-link.router-link-active,
+  .sidebar-link.is-selected {
+    @apply bg-fill-base-selected text-pen-primary-selected;
+  }
+
+  /* Footer area (User profile snippet, logout, etc) */
+  .sidebar-footer {
+    @apply p-4 border-t border-edge-base-default;
+    @apply bg-fill-floor-default;
+    @apply shrink-0; /* Prevent footer from shrinking */
+
+    /* FIX: Prevent dropdown clipping */
+    @apply overflow-visible;
+  }
+
+  /**
+   * ============================================================================
+   * NavAuthentication Fixes (Scoped to the sidebar footer)
+   * ============================================================================
+   */
+  .sidebar-footer .navbar-account-widget-root {
+    /* Override desktop horizontal styles */
+    @apply ml-0 border-l-0 pl-0;
+    /* Center the 'Sign In' buttons */
+    @apply flex items-center justify-center;
+  }
+
+  .sidebar-footer .navbar-account-widget-dropdown {
+    /* Position dropdown upwards */
+    @apply top-auto bottom-full;
+    @apply mb-2 mt-0;
+
+    /* FIX: Z-index conflict (drawer is z-50) */
+    @apply z-[60];
+  }
+}

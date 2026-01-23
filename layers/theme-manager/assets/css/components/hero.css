@@ -1,0 +1,96 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/hero.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 10
+ * @createTime: 19:54
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251110-19:54
+ * Initial creation and release of hero.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Hero Component
+   * ============================================================================
+   */
+  .hero {
+    @apply bg-fill-tertiary-default text-pen-base-default;
+    @apply relative text-center;
+
+    /* Mobile-first (base) - sm */
+    @apply px-4 py-16;
+
+    /* Tablet (md) - 768px */
+    @apply md:px-6 md:py-20;
+
+    /* Laptop (lg) - 1024px */
+    @apply lg:py-24;
+
+    /* Desktop (xl) - 1280px */
+    /* No change from lg, so it inherits lg:py-24 */
+
+    /* Large Desktop (2xl) - 1536px */
+    /* No change, inherits */
+
+    /* Ultra-large (3xl) - 1920px */
+    @apply 3xl:py-32;
+  }
+
+  .hero-title {
+    @apply font-bold mt-4 mb-4;
+
+    /* Mobile-first (base) */
+    @apply text-3xl;
+
+    /* Tablet (md) */
+    @apply md:text-4xl;
+
+    /* Laptop (lg) */
+    @apply lg:text-5xl;
+
+    /* Ultra-large (3xl) */
+    @apply 3xl:text-6xl;
+  }
+
+  .hero-subtitle {
+    @apply mb-8;
+
+    /* Mobile-first (base) */
+    @apply text-base;
+
+    /* Laptop (lg) */
+    @apply lg:text-lg;
+
+    /* Ultra-large (3xl) */
+    @apply 3xl:text-xl;
+  }
+
+  .btn-hero {
+    /*
+     * REMOVED: @apply btn;
+     * This class now only contains its specific modifiers.
+    */
+    @apply bg-fill-base-default text-pen-primary-default;
+    @apply font-semibold shadow-md-base; /* Using our full shadow matrix */
+
+    /* States */
+    @apply hover:bg-fill-base-hover;
+    @apply focus:ring-fill-base-default;
+  }
+}

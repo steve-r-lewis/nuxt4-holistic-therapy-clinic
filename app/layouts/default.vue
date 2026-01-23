@@ -24,14 +24,14 @@
 */
 
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen bg-white font-sans antialiased text-gray-600">
+    <LayoutSiteHeader />
 
-    <div class="flex flex-col min-h-screen">
-      <!-- Main Content (scrollable if needed) -->
-      <main class="flex-1 min-h-0">
-        <slot />
-      </main>
-    </div>
+    <main class="flex-1 w-full">
+      <slot />
+    </main>
+
+    <LayoutSiteFooter />
   </div>
 </template>
 

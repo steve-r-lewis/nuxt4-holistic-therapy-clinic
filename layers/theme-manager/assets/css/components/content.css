@@ -1,0 +1,48 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/ui
+ * @file:       ~/layers/theme-manager-manager/assets/css/components/content.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 12
+ * @createTime: 00:08
+ * @author:     Steve R Lewis
+ *
+ * ================================================================================
+ *
+ * @description:
+ * TODO: Create description here
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.0.0, 20251112-00:08
+ * Initial creation and release of content.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Content & Prose Components
+   * ============================================================================
+   */
+  .prose {
+    /* Base text color */
+    @apply text-pen-base-default;
+  }
+
+  .prose p {
+    /* * Applies to all <p> tags within a .prose container.
+     * Replaces 'text-lg text-gray-700 leading-relaxed'
+     */
+    @apply text-lg text-pen-muted-default leading-relaxed;
+    @apply mt-6; /* Adds consistent spacing */
+  }
+
+  .prose p:first-child {
+    @apply mt-8; /* Match the original 'mt-8' from about.vue */
+  }
+}

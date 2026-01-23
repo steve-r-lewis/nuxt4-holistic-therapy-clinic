@@ -2,10 +2,10 @@
  * ================================================================================
  *
  * @project:    @monorepo/theme-manager
- * @file:       ~/layers/theme-manager/app/assets/css/components/components.css
+ * @file:       ~/layers/theme-manager/assets/css/components/layouts.css
  * @version:    1.0.0
- * @createDate: 2025 Oct 21
- * @createTime: 16:16
+ * @createDate: 2025 Nov 10
+ * @createTime: 19:52
  * @author:     Steve R Lewis
  *
  * ================================================================================
@@ -17,20 +17,19 @@
  *
  * @notes: Revision History
  *
- * V1.0.0, 20251021-16:16
- * Initial creation and release of components.css
+ * V1.0.0, 20251110-19:52
+ * Initial creation and release of layouts.css
  *
  * ================================================================================
  */
 
-@import './buttons.css';
-@import './cards.css';
-@import './content.css';
-@import './error-page.css';
-@import './footers.css';
-@import './forms.css';
-@import './hero.css';
-@import './layouts.css';
-@import './navbars.css';
-@import './sections.css';
-@import './sidebar.css';
+@layer components {
+  /**
+   * ============================================================================
+   * Layout Components
+   * ============================================================================
+   */
+  .layout-default {
+    @apply bg-fill-floor-default text-pen-base-default;
+  }
+}

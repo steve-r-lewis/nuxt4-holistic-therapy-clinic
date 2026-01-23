@@ -1,0 +1,64 @@
+/**
+ * ================================================================================
+ *
+ * @project:    @monorepo/theme-manager
+ * @file:       ~/layers/theme-manager/assets/css/components/forms.css
+ * @version:    1.0.0
+ * @createDate: 2025 Nov 10
+ * @createTime: 19:50
+ * @author:     Steve R Lewis
+ * @author:     Google Gemini
+ *
+ * ================================================================================
+ *
+ * @description:
+ * Provides base styling for form containers and inputs.
+ *
+ * ================================================================================
+ *
+ * @notes: Revision History
+ *
+ * V1.1.0, 20251116-20:15
+ * - Merged styles from login.vue's scoped .form-input.
+ * - .form-input now includes focus and hover states from login.vue.
+ * - Changed default bg from 'bg-fill-input-default' to 'bg-fill-tertiary-default'
+ * to match the login page, as 'input' is lighter.
+ *
+ * V1.0.0, 20251110-19:50
+ * Initial creation and release of forms.css
+ *
+ * ================================================================================
+ */
+
+@layer components {
+  /**
+   * ============================================================================
+   * Form Components
+   * ============================================================================
+   */
+  .form-container {
+    @apply bg-fill-base-default p-6 rounded-2xl shadow-lg;
+    @apply border border-edge-base-default;
+  }
+
+  /* This single class works for both <input> and <textarea> */
+  .form-input {
+    /* Base styles */
+    @apply w-full text-pen-base-default;
+    @apply rounded-lg border px-3 py-2 text-sm;
+
+    /* Background */
+    @apply bg-fill-tertiary-default; /* Changed from input-default */
+
+    /* Border */
+    @apply border-edge-base-default; /* Changed from input-default */
+
+    /* Placeholder text */
+    @apply placeholder:text-pen-muted-default;
+
+    /* States */
+    @apply hover:border-edge-input-hover; /* Keep hover from original */
+    @apply focus:border-edge-primary-default focus:ring-1 focus:ring-edge-primary-default focus:outline-none;
+    @apply disabled:bg-fill-input-disabled disabled:text-pen-muted-default;
+  }
+}
