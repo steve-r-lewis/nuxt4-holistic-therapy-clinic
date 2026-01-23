@@ -24,56 +24,62 @@
  * ================================================================================
  */
 
-
-import { h } from 'vue';
-
-// Simple inline icons for the example
-const IconGraph = h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
-  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' })
-]);
-const IconLock = h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
-  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z' })
-]);
-const IconCloud = h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
-  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' })
-]);
-const IconAnalytics = h('svg', { fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', strokeWidth: 2 }, [
-  h('path', { strokeLinecap: 'round', strokeLinejoin: 'round', d: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' })
-]);
-
 const features = [
-  { title: 'Growth', text: 'This is a section of some simple filler text, also known as placeholder text.', icon: IconGraph },
-  { title: 'Security', text: 'This is a section of some simple filler text, also known as placeholder text.', icon: IconLock },
-  { title: 'Cloud', text: 'This is a section of some simple filler text, also known as placeholder text.', icon: IconCloud },
-  { title: 'Analytics', text: 'This is a section of some simple filler text, also known as placeholder text.', icon: IconAnalytics },
+  { title: 'Deep Relaxation', text: 'Alleviate stress and restore mental clarity through calming techniques.', icon: 'lucide:waves' },
+  { title: 'Pain Relief', text: 'Targeted therapies to release tension and chronic muscle pain.', icon: 'lucide:activity' },
+  { title: 'Energy Balance', text: 'Realign your body’s natural energy flow for holistic wellness.', icon: 'lucide:sun' },
+  { title: 'Natural Healing', text: 'Promoting recovery through organic and non-invasive methods.', icon: 'lucide:leaf' },
 ];
 </script>
 
 <template>
-  <section class="bg-gray-50 rounded-3xl p-8 lg:p-12">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <section class="bg-stone-50 rounded-[2rem] p-8 lg:p-12 border border-stone-100">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-      <div class="grid sm:grid-cols-2 gap-8">
-        <div v-for="(item, index) in features" :key="index">
-          <div class="w-10 h-10 rounded-lg bg-brand-purple/10 flex items-center justify-center text-brand-purple mb-3">
-            <component :is="item.icon" class="w-6 h-6" />
+      <div>
+        <div class="mb-10">
+          <span class="inline-block py-1 px-3 rounded-full bg-brand-purple/10 text-brand-purple text-xs font-bold tracking-wider uppercase mb-4">
+            Holistic Wellness Center
+          </span>
+          <h1 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight mb-6">
+            Restore Balance to Body & Mind
+          </h1>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Experience the transformative power of holistic massage therapy.
+            We blend ancient healing traditions with modern therapeutic techniques to help you find your center.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-10">
+          <div v-for="(item, index) in features" :key="index" class="flex gap-4">
+            <div class="shrink-0 w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center text-brand-purple shadow-sm">
+              <Icon :name="item.icon" class="w-5 h-5" />
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 text-sm mb-1">{{ item.title }}</h3>
+              <p class="text-xs text-gray-500 leading-relaxed">{{ item.text }}</p>
+            </div>
           </div>
-          <h3 class="font-bold text-gray-900 mb-1">{{ item.title }}</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">{{ item.text }}</p>
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 group">
-        <div class="h-48 bg-gray-200 w-full relative overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-               alt="Abstract 3D"
-               class="w-full h-full object-cover transition transform duration-500 group-hover:scale-105" />
-        </div>
-        <div class="p-6 flex items-center justify-between">
-          <span class="text-sm text-gray-500">This is some simple filler text.</span>
-          <button class="text-xs font-semibold text-brand-purple border border-gray-200 px-3 py-1 rounded hover:bg-gray-50 transition cursor-pointer">
-            More
-          </button>
+      <div class="relative group">
+        <div class="aspect-[4/5] bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt="Relaxing Massage Therapy Setting"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-xl p-4 shadow-sm border border-white/50 flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="text-xs font-bold text-brand-purple uppercase tracking-wider">New Clients</span>
+              <span class="text-sm text-gray-600">Free consultation included</span>
+            </div>
+            <button class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center hover:bg-brand-purple transition">
+              <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
 

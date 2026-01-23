@@ -24,37 +24,59 @@
  * ================================================================================
  */
 
-const items = [
-  { title: 'Shooting Stars' },
-  { title: 'The Catalyzer' },
-  { title: 'Neptune' },
-  { title: 'Melanchole' },
+const therapies = [
+  {
+    title: 'Swedish Massage',
+    description: 'A gentle, full-body massage that targets surface muscles to release tension and improve circulation.',
+    price: 'from $80'
+  },
+  {
+    title: 'Deep Tissue',
+    description: 'Intense pressure focused on the deeper layers of muscle tissue to treat chronic aches and pains.',
+    price: 'from $95'
+  },
+  {
+    title: 'Aromatherapy',
+    description: 'Combines the physical benefits of massage with the emotional healing properties of essential oils.',
+    price: 'from $85'
+  },
+  {
+    title: 'Reflexology',
+    description: 'Application of pressure to specific points on the feet and hands that correspond to organs and systems.',
+    price: 'from $70'
+  },
 ]
 </script>
 
 <template>
   <div>
     <section class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-[10px] font-bold tracking-widest text-brand-sage uppercase mb-3 block">
-          Roof Party Polaroid
-        </span>
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        Master Cleanse Reliac Heirloom
-      </h1>
+      <span class="text-[10px] font-bold tracking-widest text-brand-purple uppercase mb-3 block">
+        Our Therapies
+      </span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+        Curated Treatments for Total Wellness
+      </h2>
       <p class="text-gray-500 leading-relaxed">
-        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.
+        We believe every body tells a unique story. Our therapists listen to your needs
+        to craft a personalized session that addresses your specific physical and emotional goals.
       </p>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
-      <div v-for="(item, i) in items" :key="i" class="lg:px-6 first:pl-0 last:pr-0 pt-8 lg:pt-0 first:pt-0">
-        <h3 class="font-bold text-gray-900 mb-3 text-lg">{{ item.title }}</h3>
-        <p class="text-sm text-gray-500 leading-relaxed mb-4">
-          Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+      <div v-for="(item, i) in therapies" :key="i" class="p-8 lg:p-10 hover:bg-stone-50 transition duration-300">
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-bold text-gray-900 text-lg font-serif">{{ item.title }}</h3>
+          <span class="text-xs font-medium bg-brand-purple/5 text-brand-purple px-2 py-1 rounded">{{ item.price }}</span>
+        </div>
+
+        <p class="text-sm text-gray-500 leading-relaxed mb-6 min-h-[4rem]">
+          {{ item.description }}
         </p>
-        <NuxtLink to="#" class="inline-flex items-center text-brand-purple hover:text-brand-sage transition text-sm font-medium group">
+
+        <NuxtLink to="/therapies" class="inline-flex items-center text-brand-purple hover:text-gray-900 transition text-sm font-medium group">
           Learn More
-          <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          <Icon name="lucide:arrow-right" class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
         </NuxtLink>
       </div>
     </section>
