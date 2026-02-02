@@ -177,6 +177,17 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   runtimeConfig: {
+    // Private keys (Server-side only)
+    zohoSmtpHost: process.env.ZOHO_SMTP_SERVER_NAME,
+    zohoSmtpPort: process.env.ZOHO_SMTP_SERVER_PORT,
+    zohoSmtpSecure: process.env.ZOHO_SMTP_SERVER_SECURITY,
+    zohoUser: process.env.ZOHO_EMAIL,
+    zohoPassword: process.env.ZOHO_PASSWORD,
+
+    // Public keys (Client-side)
+    public: {
+      contactEmail: process.env.ZOHO_EMAIL || 'susan.chinnery@holistictherapyclinic.co.uk'
+    }
   },
 
   /**
