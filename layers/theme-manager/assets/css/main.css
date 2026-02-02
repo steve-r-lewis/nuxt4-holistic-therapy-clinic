@@ -47,6 +47,9 @@
  */
 @import 'tailwindcss';
 
+/* Load the plugin directly in CSS */
+@plugin "@tailwindcss/typography";
+
 /**
  * STEP 2: Load the theme's CSS variables.
  * - `theme-default.css` provides a fallback theme (e.g., "Spring")

@@ -26,13 +26,11 @@
 
 useHead({
   title: 'Wellness Journal | Holistic Therapy Clinic'
-})
+});
 
-const posts = [
-  { title: 'The Benefits of Lymphatic Drainage', date: 'Oct 12, 2025', excerpt: 'How this gentle technique can boost your immune system.' },
-  { title: 'Creating a Calm Home Environment', date: 'Sep 28, 2025', excerpt: 'Simple tips to bring the spa atmosphere into your living room.' },
-  { title: 'Why Hydration Matters After Massage', date: 'Sep 15, 2025', excerpt: 'Understanding the body’s detoxification process post-treatment.' }
-]
+const { data: posts } = await useAsyncData('blog-posts', () =>
+  queryCollection('blog').order('date', 'DESC').all()
+)
 </script>
 
 <template>
@@ -43,10 +41,27 @@ const posts = [
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <article v-for="(post, i) in posts" :key="i" class="group cursor-pointer">
-        <div class="bg-gray-100 aspect-video rounded-lg mb-4"></div> <div class="text-xs text-gray-400 font-medium mb-2">{{ post.date }}</div>
-        <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-purple transition">{{ post.title }}</h2>
-        <p class="text-sm text-gray-500 leading-relaxed">{{ post.excerpt }}</p>
+      <article v-for="post in posts" :key="post.path" class="group cursor-pointer">
+        <NuxtLink :to="post.path">
+
+          <div class="aspect-video rounded-lg mb-4 overflow-hidden bg-gray-100">
+            <img
+              v-if="post.image"
+              :src="post.image"
+              :alt="post.title"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+            <div v-else class="w-full h-full flex items-center justify-center text-gray-300">
+              <Icon name="ph:plant-duotone" size="48" />
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 font-medium mb-2">{{ post.date }}</div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-purple transition">
+            {{ post.title }}
+          </h2>
+          <p class="text-sm text-gray-500 leading-relaxed line-clamp-3">{{ post.excerpt }}</p>
+        </NuxtLink>
       </article>
     </div>
   </div>

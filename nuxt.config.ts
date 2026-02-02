@@ -50,7 +50,8 @@ export default defineNuxtConfig({
    */
   modules: [
     '@pinia/nuxt',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@nuxt/content' // Add this module
   ],
 
   /**
@@ -67,6 +68,18 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   imports: {
+  },
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @NUXT-CONTENT-CONFIGURATION:
+   * ------------------------------------------------------------------------------
+   */
+  content: {
+    // Content module configuration
+    database: {
+      type: 'sqlite' // Nuxt 4 recommended database
+    }
   },
 
   /**
