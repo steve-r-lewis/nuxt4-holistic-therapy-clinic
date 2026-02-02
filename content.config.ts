@@ -36,17 +36,33 @@ export default defineContentConfig({
         title: z.string(),
         date: z.string(),
         excerpt: z.string(),
-        image: z.string().optional() // <--- Added this
+        image: z.string().optional()
       })
     }),
+
+    // [EXISTING] Your JSON Price List
     therapies: defineCollection({
-      source: 'datastore/therapies/*.json', // Fragmented JSON files
+      source: 'datastore/therapies/*.json',
       type: 'data',
       schema: z.object({
         name: z.string(),
         duration: z.string(),
         price: z.string(),
-        desc: z.string()
+        desc: z.string(),
+        // [NEW] Optional link to the detail page (e.g., 'swedish-massage')
+        relatedPost: z.string().optional()
+      })
+    }),
+
+    // [NEW] The Detailed Pages
+    treatments: defineCollection({
+      source: 'treatments/*.md', // Looks for files in content/treatments/
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        // [NEW] Optional image for the detail page
+        image: z.string().optional()
       })
     })
   }
