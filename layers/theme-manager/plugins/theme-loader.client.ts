@@ -31,7 +31,7 @@
  * pinia instance from nuxtApp to the store.
  *
  * V3.0.0, 20251119-23:28
- * - Removed data initialization logic (moved to 02.init-theme.global.ts).
+ * - Removed datastore initialization logic (moved to 02.init-theme.global.ts).
  * - Removed complex race-condition checks (no longer needed).
  * - Focuses solely on reactive DOM manipulation.
  *
@@ -51,9 +51,9 @@ import type { ThemeProfile } from '../types/theme'
 // --- Utility Functions ---
 
 function applyTheme(theme: ThemeProfile) {
-  // SAFETY GUARD: Prevent crash if partial data is loaded
+  // SAFETY GUARD: Prevent crash if partial datastore is loaded
   if (!theme || !theme.colors) {
-    console.warn('[ThemeLoader] Skipping apply: Theme data is incomplete (missing colors).');
+    console.warn('[ThemeLoader] Skipping apply: Theme datastore is incomplete (missing colors).');
     return;
   }
 

@@ -40,7 +40,7 @@ export default defineContentConfig({
       })
     }),
     therapies: defineCollection({
-      source: 'data/therapies/*.json', // Fragmented JSON files
+      source: 'datastore/therapies/*.json', // Fragmented JSON files
       type: 'data',
       schema: z.object({
         name: z.string(),

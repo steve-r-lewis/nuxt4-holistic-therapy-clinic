@@ -15,7 +15,7 @@
 # ------------------
 # Sections are ordered from most global + high-churn artifacts (node_modules,
 # env files, logs) to framework/tool-specific and finally to project-manager-specific
-# runtime data[cite: 1].
+# runtime datastore[cite: 1].
 #
 # EXCEPTIONS
 # ----------
@@ -150,7 +150,7 @@
 **/standalone/           # Legacy pattern retained
 
 # Specific file exclusions
-# Temporary exclude to ensure that private data does not pollute the Git repository[cite: 16].
+# Temporary exclude to ensure that private datastore does not pollute the Git repository[cite: 16].
 # nuxt.config.ts
 
 # ---
@@ -249,13 +249,13 @@ qodana.yaml                   # JetBrains Qodana CI config (ignore local)
 # 11. Project-Specific Runtime & Dev Data
 # =============================================
 
-# Generated data/datasets, exported API pulls, etc.
+# Generated datastore/datasets, exported API pulls, etc.
 **/.data/                    # Hidden data scratch
 **/.development/             # Hidden variant
 **/data/
 **/development/              # Local development scratch trees
 **/sandbox*/                 # Local scratch (dup with Testing block ok for safety)
-# **/backend-mock-data-stores/  # Local backend data mockup.
+# **/backend-mock-datastore-stores/  # Local backend datastore mockup.
 
 # ============================================================================
 # End of File

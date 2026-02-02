@@ -65,7 +65,7 @@ export const useThemeStore = defineStore('theme', () => {
     maxAge: 60 * 60 * 24 * 365
   });
 
-  const activeThemeData = useState<ThemeProfile | null>('active-theme-data', () => null);
+  const activeThemeData = useState<ThemeProfile | null>('active-theme-datastore', () => null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
 

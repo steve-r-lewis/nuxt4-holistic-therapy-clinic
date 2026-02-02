@@ -19,7 +19,7 @@
  *
  * V1.1.0, 20251124-00:56
  * - Removed direct file system access.
- * - Uses Service Locator `getThemeRepository()` to fetch data.
+ * - Uses Service Locator `getThemeRepository()` to fetch datastore.
  *
  * V1.0.0, 20251118-22:49
  * Initial creation and release of index.get.ts

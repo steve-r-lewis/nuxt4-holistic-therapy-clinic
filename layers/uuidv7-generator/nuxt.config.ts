@@ -12,9 +12,9 @@
  *
  * @description:
  * This configuration file defines the parameters for generating mock
- * UUID-V7 data entries, including a date range (start/end dates), and the
+ * UUID-V7 datastore entries, including a date range (start/end dates), and the
  * number of UUIDs required. Users can adjust these settings to tailor their
- * data generation needs.
+ * datastore generation needs.
  *
  * ================================================================================
  *

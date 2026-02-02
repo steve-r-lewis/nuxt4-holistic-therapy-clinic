@@ -11,7 +11,7 @@
  * ================================================================================
  *
  * @description:
- * High-priority global middleware to ensure the active theme data is loaded
+ * High-priority global middleware to ensure the active theme datastore is loaded
  * into the store before the page renders.
  *
  * This runs AFTER '01.init-authentication' but BEFORE page components are mounted.
@@ -34,8 +34,8 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   // 1. Safe Access: Middleware runs after Pinia is installed.
   const themeStore = useThemeStore(nuxtApp.$pinia);
 
-  // 2. Hydration: Ensure theme data is loaded from cookie/API.
-  // We await this so the data is ready for the client plugin to use immediately.
+  // 2. Hydration: Ensure theme datastore is loaded from cookie/API.
+  // We await this so the datastore is ready for the client plugin to use immediately.
   await themeStore.initialize();
 })
 

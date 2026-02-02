@@ -11,7 +11,7 @@
  * ================================================================================
  *
  * @description:
- * Type definitions for the Theme Manager data structure.
+ * Type definitions for the Theme Manager datastore structure.
  *
  * ================================================================================
  *

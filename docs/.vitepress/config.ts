@@ -50,18 +50,18 @@ export default defineConfig({
           text: 'Architecture Overview',
           items: [
             { text: 'Introduction', link: '/data-architecture/' },
-            { text: 'Mock Data Wrapper', link: '/data-architecture/mock-data-wrapper' },
+            { text: 'Mock Data Wrapper', link: '/datastore-architecture/mock-datastore-wrapper' },
           ]
         },
         {
           text: 'Data Stores',
           items: [
-            { text: 'CouchDB', link: '/data-architecture/couchdb/' },
-            { text: 'PostgreSQL', link: '/data-architecture/postgresql/' },
-            { text: 'Memgraph', link: '/data-architecture/memgraph/' },
-            { text: 'MinIO', link: '/data-architecture/minio/' },
-            { text: 'OpenSearch', link: '/data-architecture/opensearch/' },
-            { text: 'Valkey', link: '/data-architecture/valkey/' },
+            { text: 'CouchDB', link: '/datastore-architecture/couchdb/' },
+            { text: 'PostgreSQL', link: '/datastore-architecture/postgresql/' },
+            { text: 'Memgraph', link: '/datastore-architecture/memgraph/' },
+            { text: 'MinIO', link: '/datastore-architecture/minio/' },
+            { text: 'OpenSearch', link: '/datastore-architecture/opensearch/' },
+            { text: 'Valkey', link: '/datastore-architecture/valkey/' },
           ]
         }
       ],
