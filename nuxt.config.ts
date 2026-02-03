@@ -33,6 +33,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-10-08',
   devtools: { enabled: true },
 
+  devServer: {
+    host: '127.0.0.1',
+    port: 3000
+  },
+
   /**
    * ------------------------------------------------------------------------------
    * @EXTENDS:
@@ -75,10 +80,11 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   sitemap: {// Force the module to look at the exact IPv4 address
-    sources: [
-      '/api/sitemap'
-    ],
-    debug: true, // This will log sitemap errors to your terminal
+    // sources: [
+    //   '/api/sitemap'
+    // ],
+    enabled: false,
+    debug: true // This will log sitemap errors to your terminal
   },
 
   /**
@@ -149,7 +155,7 @@ export default defineNuxtConfig({
 
     server: {
       hmr: {
-        port: 11500,       // Pin to main port (avoids random ports like 24678 that fail intermittently)
+        port: 3000,        // Pin to main port (avoids random ports like 24678 that fail intermittently)
         host: '127.0.0.1', // Force IPv4 (macOS/Windows often defaults to IPv6, causing mismatches)
         protocol: 'ws',    // Explicit WebSocket protocol for stability
         timeout: 30000,    // Bump from default 10s to prevent idle disconnects
