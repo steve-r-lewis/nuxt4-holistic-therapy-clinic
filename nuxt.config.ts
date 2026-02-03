@@ -74,10 +74,11 @@ export default defineNuxtConfig({
    * Connects to the server API to find your SQL content pages
    * ------------------------------------------------------------------------------
    */
-  sitemap: {
+  sitemap: {// Force the module to look at the exact IPv4 address
     sources: [
-      '/api/sitemap' // Ensure you create server/api/sitemap.ts for this to work
-    ]
+      '/api/sitemap'
+    ],
+    debug: true, // This will log sitemap errors to your terminal
   },
 
   /**
