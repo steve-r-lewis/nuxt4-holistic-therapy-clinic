@@ -25,16 +25,60 @@
  */
 
 const route = useRoute();
+// [REMOVED] const config = useRuntimeConfig() -> We don't need this anymore
 
+// 1. Fetch Content
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
-)
+);
 
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
+
+// 2. Get Site URL from the SEO Module
+const siteConfig = useSiteConfig() // [NEW] Standardized way to get the URL
+const siteUrl = siteConfig.url || 'https://holistictherapyclinic.co.uk';
+
+// 3. Compute Absolute Image URL
+const relativeImage = page.value.image || '/logo.png';
+const socialImage = `${siteUrl}${relativeImage}`;
+
+// 4. UI Image Logic
+const displayImage = computed(() => page.value?.image || '/logo.png');
+const isFallback = computed(() => !page.value?.image);
+
+// 5. SEO Metadata
 useSeoMeta({
-  title: page.value?.title,
-  description: page.value?.description,
-  image: page.value?.image // [NEW] Add to SEO metadata
-})
+  title: `${page.value.title} | Holistic Therapy Clinic`,
+  description: page.value.description,
+  image: page.value?.image, // [NEW] Add to SEO metadata
+
+  // Socials
+  ogTitle: page.value.title,
+  ogDescription: page.value.description,
+  ogImage: socialImage,
+  // [REMOVED] ogUrl -> The module generates this (and the canonical tag) automatically
+  ogType: 'article',
+  ogSiteName: 'Holistic Therapy Clinic',
+
+  // Twitter
+  twitterCard: 'summary_large_image',
+  twitterTitle: page.value.title,
+  twitterDescription: page.value.description,
+  twitterImage: socialImage
+});
+
+// 6. [NEW] Structured Data (Schema.org)
+// This helps Google understand this is an Article/Service
+useSchemaOrg([
+  defineArticle({
+    headline: page.value.title,
+    description: page.value.description,
+    image: socialImage,
+    datePublished: new Date().toISOString(), // You might want to add a 'date' field to your markdown later
+  })
+])
 </script>
 
 <template>

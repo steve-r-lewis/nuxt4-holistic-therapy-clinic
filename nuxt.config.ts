@@ -51,8 +51,34 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxt/icon',
-    '@nuxt/content' // Add this module
+    '@nuxt/content',
+    '@nuxtjs/seo'
   ],
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @SEO-CONFIGURATION: [NEW]
+   * Replaces the manual runtimeConfig.public.siteUrl
+   * ------------------------------------------------------------------------------
+   */
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://holistictherapyclinic.co.uk',
+    name: 'Holistic Therapy Clinic',
+    description: 'Professional holistic treatments including Swedish Massage, Deep Tissue, and Aromatherapy in Westray.',
+    defaultLocale: 'en-GB',
+  },
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @SITEMAP-CONFIGURATION: [NEW]
+   * Connects to the server API to find your SQL content pages
+   * ------------------------------------------------------------------------------
+   */
+  sitemap: {
+    sources: [
+      '/api/sitemap' // Ensure you create server/api/sitemap.ts for this to work
+    ]
+  },
 
   /**
    * ------------------------------------------------------------------------------
@@ -90,7 +116,6 @@ export default defineNuxtConfig({
   icon: {
     size: '24',
     class: 'inline-block',
-
     serverBundle: 'remote',
     provider: 'iconify',
     collections: [] // explicitly prevent auto-discovery
