@@ -75,6 +75,25 @@ export default defineNuxtConfig({
 
   /**
    * ------------------------------------------------------------------------------
+   * ROBOTS.TXT
+   * ------------------------------------------------------------------------------
+   */
+  robots: {
+    // 1. Explicitly point to the manual file we created
+    // The module will automatically prepend your site.url (https://holistictherapyclinic.co.uk)
+    sitemap: '/sitemap.xml',
+
+    // 2. Define Rules
+    // We allow Google to crawl everything.
+    // Note: We do NOT disallow /_nuxt/ because Google needs to load JS to render your page correctly.
+    allow: '/',
+
+    // Optional: If you had private pages, you would list them here.
+    // disallow: ['/api/', '/admin/'],
+  },
+
+  /**
+   * ------------------------------------------------------------------------------
    * @SITEMAP-CONFIGURATION: [NEW]
    * Connects to the server API to find your SQL content pages
    * ------------------------------------------------------------------------------
