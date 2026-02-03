@@ -24,46 +24,97 @@
  * ================================================================================
  */
 
-useHead({
-  title: 'Wellness Journal | Holistic Therapy Clinic'
-});
+const siteConfig = useSiteConfig();
 
+// 1. Fetch Data
 const { data: posts } = await useAsyncData('blog-posts', () =>
   queryCollection('blog').order('date', 'DESC').all()
-)
+);
+
+// 2. SEO Configuration (Upgrade)
+useSeoMeta({
+  title: 'Wellness Journal | Holistic Therapy Clinic',
+  description: 'Read our latest articles on holistic health, massage therapy benefits, and wellness tips.',
+  ogTitle: 'Wellness Journal | Holistic Therapy Clinic',
+  ogDescription: 'Read our latest articles on holistic health, massage therapy benefits, and wellness tips.',
+  ogImage: '/logo.png',
+  ogUrl: `${siteConfig.url}/blog`,
+})
+
+// 3. Helper: Format Date nicely (e.g., "12 October 2025")
+const formatDate = (dateString: string) => {
+  if (!dateString) return '';
+  return new Date(dateString).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+}
 </script>
 
 <template>
-  <div class="max-w-5xl mx-auto px-6 py-12">
-    <div class="text-center mb-16">
-      <span class="text-xs font-bold tracking-widest text-brand-purple uppercase">The Journal</span>
-      <h1 class="text-4xl font-serif font-bold text-gray-900 mt-3">Wellness & Insights</h1>
-    </div>
+  <div class="max-w-7xl mx-auto px-6 py-12">
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <article v-for="post in posts" :key="post.path" class="group cursor-pointer">
-        <NuxtLink :to="post.path">
+    <header class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-brand-purple font-bold tracking-widest text-xs uppercase mb-2 block">
+        The Journal
+      </span>
+      <h1 class="text-4xl font-serif font-bold text-gray-900 mb-6">
+        Wellness & Insights
+      </h1>
+      <p class="text-gray-500 text-lg leading-relaxed">
+        Expert advice, clinic updates, and deep dives into the benefits of holistic therapy.
+      </p>
+    </header>
 
-          <div class="aspect-video rounded-lg mb-4 overflow-hidden bg-gray-100">
-            <img
-              v-if="post.image"
-              :src="post.image"
-              :alt="post.title"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
-            <div v-else class="w-full h-full flex items-center justify-center text-gray-300">
-              <Icon name="ph:plant-duotone" size="48" />
-            </div>
+    <div v-if="posts && posts.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <NuxtLink
+        v-for="post in posts"
+        :key="post.path"
+        :to="post.path"
+        class="group flex flex-col h-full"
+      >
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 mb-6 relative shadow-sm group-hover:shadow-md transition">
+          <img
+            v-if="post.image"
+            :src="post.image"
+            :alt="post.title"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div v-else class="w-full h-full flex items-center justify-center bg-brand-purple/5">
+            <Icon name="ph:plant-duotone" class="text-brand-purple/20 w-16 h-16" />
+          </div>
+        </div>
+
+        <div class="flex flex-col flex-grow">
+          <div class="text-xs font-bold text-brand-purple mb-3 uppercase tracking-wider">
+            {{ formatDate(post.date) }}
           </div>
 
-          <div class="text-xs text-gray-400 font-medium mb-2">{{ post.date }}</div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-purple transition">
+          <h2 class="text-xl font-bold text-gray-900 mb-3 font-serif group-hover:text-brand-purple transition leading-tight">
             {{ post.title }}
           </h2>
-          <p class="text-sm text-gray-500 leading-relaxed line-clamp-3">{{ post.excerpt }}</p>
-        </NuxtLink>
-      </article>
+
+          <p class="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-4 flex-grow">
+            {{ post.excerpt }}
+          </p>
+
+          <div class="flex items-center text-sm font-bold text-gray-900 group-hover:text-brand-purple transition mt-auto">
+            Read Article
+            <Icon name="ph:arrow-right" class="ml-2 group-hover:translate-x-1 transition" />
+          </div>
+        </div>
+      </NuxtLink>
+
     </div>
+
+    <div v-else class="text-center py-24 bg-gray-50 rounded-3xl">
+      <Icon name="ph:pencil-slash" class="w-12 h-12 text-gray-300 mb-4" />
+      <h3 class="text-lg font-bold text-gray-900">No articles yet</h3>
+      <p class="text-gray-500 mt-2">Check back soon for updates!</p>
+    </div>
+
   </div>
 </template>
 
