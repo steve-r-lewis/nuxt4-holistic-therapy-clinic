@@ -26,19 +26,30 @@
 import { asSitemapUrl, defineSitemapEventHandler } from '#imports'
 
 export default defineSitemapEventHandler(async (e) => {
-  // 1. Fetch all blog posts
-  const blogPosts = await queryCollection(e, 'blog').select('path', 'date').all();
+  try {
+    // 1. Fetch Blog Posts (Select path and date for SEO)
+    const blogPosts = await queryCollection(e, 'blog')
+      .select('path', 'date')
+      .all();
 
-  // 2. Fetch all treatment pages
-  const treatmentPages = await queryCollection(e, 'treatments').select('path').all();
+    // 2. Fetch Treatment Pages
+    const treatmentPages = await queryCollection(e, 'treatments')
+      .select('path')
+      .all();
 
-  // 3. Merge and map to Sitemap format
-  const allRoutes = [...blogPosts, ...treatmentPages].map(page => {
-    return asSitemapUrl({
-      loc: page.path,
-      lastmod: page.date || new Date().toISOString()
-    })
-  })
+    // 3. Merge them into one list
+    const allRoutes = [...blogPosts, ...treatmentPages].map(page => {
+      return asSitemapUrl({
+        loc: page.path,
+        // Use the post date, or fallback to today if missing
+        lastmod: page.date || new Date().toISOString()
+      })
+    });
 
-  return allRoutes
+    return allRoutes
+
+  } catch (error) {
+    console.error('Sitemap Generation Failed:', error);
+    return [] // Return empty array to prevent crashing
+  }
 })
