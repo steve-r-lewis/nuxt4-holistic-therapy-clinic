@@ -75,6 +75,9 @@ export default defineNuxtConfig({
     '/contact': { prerender: true },
     '/blog': { prerender: true },
 
+    '/sitemap.xml': { prerender: true },
+    '/robots.txt': { prerender: true },
+
     // Blog & Treatments: Use ISR (Incremental Static Regeneration)
     // Rebuilds in the background once per hour if data changes.
     '/blog/**': { isr: 3600 },
