@@ -82,7 +82,6 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
             <div class="text-xs text-gray-400 font-medium">{{ t.duration }}</div>
           </div>
         </div>
-
       </template>
     </div>
   </div>

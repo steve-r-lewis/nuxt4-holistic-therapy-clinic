@@ -112,6 +112,7 @@ useSchemaOrg([
             <NuxtLink
               v-if="t.relatedPost"
               :to="`/treatments/${t.relatedPost}`"
+              :aria-label="`Learn more about ${t.title}`"
               class="py-2 inline-flex items-center text-sm font-bold text-brand-purple hover:text-purple-700 transition"
             >
               Learn More

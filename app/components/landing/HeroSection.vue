@@ -71,7 +71,7 @@ const features = [
           <NuxtImg
             src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             alt="Relaxing Massage Therapy Setting"
-            format="webp"
+            provider="ipx" format="webp"
             loading="lazy"
             sizes="100vw md:50vw lg:600px"
             class="w-full h-full object-cover transition duration-700 group-hover:scale-105"

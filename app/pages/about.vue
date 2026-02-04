@@ -45,7 +45,7 @@ useHead({
     </div>
 
     <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100 mt-8">
-      <h3 class="font-bold text-gray-900 mb-2">Our Philosophy</h3>
+      <h2 class="font-bold text-gray-900 mb-2">Our Philosophy</h2>
       <p class="text-gray-600 italic">"Wellness is not a luxury; it is a necessity for a balanced life."</p>
     </div>
   </div>

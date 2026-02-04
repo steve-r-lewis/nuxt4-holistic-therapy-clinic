@@ -455,7 +455,8 @@
   --color-edge-notification-disabled: var(--api-edge-notification-disabled);
 
   /* Brand Colors from Screenshot */
-  --color-brand-purple: #a389b1;
+  /* --color-brand-purple: #a389b1; */
+  --color-brand-purple: #6B21A8;
   --color-brand-sage: #97b189;
 
   /* Derived Opacity Variants (optional utility helper) */
