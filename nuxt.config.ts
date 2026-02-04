@@ -70,10 +70,10 @@ export default defineNuxtConfig({
   routeRules: {
     // Homepage & Static Pages: Pre-render content at build time (Instant Load)
     '/': { prerender: true },
-    // '/story': { prerender: true },
-    '/about': { prerender: true }, // [FIX] Changed from '/story' to '/about'
+    '/about': { prerender: true },
     '/therapies': { prerender: true },
     '/contact': { prerender: true },
+    '/blog': { prerender: true },
 
     // Blog & Treatments: Use ISR (Incremental Static Regeneration)
     // Rebuilds in the background once per hour if data changes.
@@ -87,7 +87,8 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   image: {
-    format: ['webp'], // Force WebP format
+    domains: ['images.unsplash.com'],
+    format: ['webp'],
     quality: 80,      // Good balance of size/quality
     // If using local images in /public, no provider needed.
     // If using external images (like from a CMS), add domains here.
