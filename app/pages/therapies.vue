@@ -36,8 +36,8 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
 
 <template>
   <div class="max-w-4xl mx-auto px-6 py-12">
-
     <h1 class="text-4xl font-serif font-bold text-gray-900 mb-6">Our Treatments</h1>
+
     <p class="text-gray-600 mb-12 leading-relaxed">
       Each session is tailored to your specific needs. We recommend arriving 15 minutes early
       to discuss your goals with your therapist.
@@ -58,8 +58,10 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
               </h3>
               <Icon name="ph:arrow-right" class="text-gray-300 group-hover:text-brand-purple group-hover:translate-x-1 transition" />
             </div>
+
             <p class="text-gray-500 text-sm mt-1">{{ t.desc }}</p>
           </div>
+
           <div class="text-right shrink-0">
             <div class="font-serif text-lg font-bold text-brand-purple">{{ t.price }}</div>
             <div class="text-xs text-gray-400 font-medium">{{ t.duration }}</div>
@@ -74,6 +76,7 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
             <h3 class="text-xl font-bold text-gray-800">{{ t.name }}</h3>
             <p class="text-gray-500 text-sm mt-1">{{ t.desc }}</p>
           </div>
+
           <div class="text-right shrink-0">
             <div class="font-serif text-lg font-bold text-brand-purple">{{ t.price }}</div>
             <div class="text-xs text-gray-400 font-medium">{{ t.duration }}</div>

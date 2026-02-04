@@ -13,8 +13,6 @@
     "monorepo",
     "nuxt",
     "nuxt 4",
-    "",
-    "",
     "Starter template",
     "typescript",
     "vue"
@@ -45,12 +43,16 @@
   "scripts": {
     "appTools": "tsx scripts/tui/app.ts",
     "dev": "nuxt dev --force",
-    "build": "nuxt build"
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@nuxt/content": "3.11.0",
+    "@nuxt/fonts": "0.13.0",
     "@nuxt/icon": "^2.1.0",
+    "@nuxt/image": "2.0.0",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.6.2",

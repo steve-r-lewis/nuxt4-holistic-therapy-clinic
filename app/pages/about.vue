@@ -37,6 +37,7 @@ useHead({
       <p class="text-lg leading-relaxed">
         Holistic Therapy Clinic began with a simple belief: that the body has an innate intelligence to heal itself when given the right space and support.
       </p>
+
       <p>
         Founded in 2024, our clinic moves away from the "rush-in, rush-out" mentality of modern spas.
         We focus on slow, deliberate practice, ensuring every client feels heard, understood, and restored.

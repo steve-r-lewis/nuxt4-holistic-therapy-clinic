@@ -73,15 +73,19 @@ const formatDate = (dateString: string) => {
         v-for="post in posts"
         :key="post.path"
         :to="post.path"
-        class="group flex flex-col h-full"
+        class="py-2 group flex flex-col h-full"
       >
         <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 mb-6 relative shadow-sm group-hover:shadow-md transition">
-          <img
+          <NuxtImg
             v-if="post.image"
             :src="post.image"
             :alt="post.title"
+            format="webp"
+            loading="lazy"
+            sizes="100vw sm:50vw md:33vw"
             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
           />
+
           <div v-else class="w-full h-full flex items-center justify-center bg-brand-purple/5">
             <Icon name="ph:plant-duotone" class="text-brand-purple/20 w-16 h-16" />
           </div>
@@ -114,7 +118,6 @@ const formatDate = (dateString: string) => {
       <h3 class="text-lg font-bold text-gray-900">No articles yet</h3>
       <p class="text-gray-500 mt-2">Check back soon for updates!</p>
     </div>
-
   </div>
 </template>
 

@@ -57,8 +57,54 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/icon',
     '@nuxt/content',
+    '@nuxt/fonts',
+    '@nuxt/image',
     '@nuxtjs/seo'
   ],
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @ROUTERULES
+   * ------------------------------------------------------------------------------
+   */
+  routeRules: {
+    // Homepage & Static Pages: Pre-render content at build time (Instant Load)
+    '/': { prerender: true },
+    // '/story': { prerender: true },
+    '/about': { prerender: true }, // [FIX] Changed from '/story' to '/about'
+    '/therapies': { prerender: true },
+    '/contact': { prerender: true },
+
+    // Blog & Treatments: Use ISR (Incremental Static Regeneration)
+    // Rebuilds in the background once per hour if data changes.
+    '/blog/**': { isr: 3600 },
+    '/treatments/**': { isr: 3600 },
+  },
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @NUXT/IMAGE
+   * ------------------------------------------------------------------------------
+   */
+  image: {
+    format: ['webp'], // Force WebP format
+    quality: 80,      // Good balance of size/quality
+    // If using local images in /public, no provider needed.
+    // If using external images (like from a CMS), add domains here.
+  },
+
+  /**
+   * ------------------------------------------------------------------------------
+   * @NUXT/FONTS
+   * ------------------------------------------------------------------------------
+   */
+  // [NEW] Font Optimization (Fixes Layout Shift)
+  fonts: {
+    families: [
+      { name: 'Playfair Display', provider: 'google' },
+      { name: 'Lato', provider: 'google' }
+    ]
+  },
 
   /**
    * ------------------------------------------------------------------------------

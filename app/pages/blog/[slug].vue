@@ -25,85 +25,102 @@
  */
 
 const route = useRoute();
-// [REMOVED] const config = useRuntimeConfig() -> We don't need this anymore
 
-// 1. Fetch Content
-const { data: page } = await useAsyncData(route.path, () =>
+// 1. Fetch the specific post
+// We define the variable as 'post'
+const { data: post, status } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
 );
 
-if (!page.value) {
+// [FIX] Changed 'page' to 'post'
+if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 }
 
-// 2. Get Site URL from the SEO Module
-const siteConfig = useSiteConfig() // [NEW] Standardized way to get the URL
+// 2. Get Site URL
+const siteConfig = useSiteConfig()
 const siteUrl = siteConfig.url || 'https://holistictherapyclinic.co.uk';
 
 // 3. Compute Absolute Image URL
-const relativeImage = page.value.image || '/logo.png';
+// [FIX] Changed 'page' to 'post'
+const relativeImage = post.value.image || '/logo.png';
 const socialImage = `${siteUrl}${relativeImage}`;
 
-// 4. UI Image Logic
-const displayImage = computed(() => page.value?.image || '/logo.png');
-const isFallback = computed(() => !page.value?.image);
-
-// 5. SEO Metadata
+// 4. SEO Metadata
 useSeoMeta({
-  title: `${page.value.title} | Holistic Therapy Clinic`,
-  description: page.value.description,
-  image: page.value?.image, // [NEW] Add to SEO metadata
+  // [FIX] Changed 'page' to 'post' everywhere below
+  title: `${post.value.title} | Holistic Therapy Clinic`,
+  description: post.value.description,
 
   // Socials
-  ogTitle: page.value.title,
-  ogDescription: page.value.description,
-  ogImage: socialImage,
-  // [REMOVED] ogUrl -> The module generates this (and the canonical tag) automatically
+  ogTitle: post.value.title,
+  ogDescription: post.value.description,
+  ogImage: socialImage, // Use the computed absolute URL
   ogType: 'article',
   ogSiteName: 'Holistic Therapy Clinic',
 
   // Twitter
   twitterCard: 'summary_large_image',
-  twitterTitle: page.value.title,
-  twitterDescription: page.value.description,
+  twitterTitle: post.value.title,
+  twitterDescription: post.value.description,
   twitterImage: socialImage
 });
 
-// 6. [NEW] Structured Data (Schema.org)
-// This helps Google understand this is an Article/Service
+// 5. Structured Data
 useSchemaOrg([
   defineArticle({
-    headline: page.value.title,
-    description: page.value.description,
+    // [FIX] Changed 'page' to 'post'
+    headline: post.value.title,
+    description: post.value.description,
     image: socialImage,
-    datePublished: new Date().toISOString(), // You might want to add a 'date' field to your markdown later
+    datePublished: new Date().toISOString(),
   })
 ])
 </script>
 
 <template>
-  <div class="max-w-4xl mx-auto px-6 py-12" v-if="page">
+  <div class="max-w-4xl mx-auto px-6 py-12">
 
-    <header class="mb-10 text-center">
-      <div class="text-xs font-bold tracking-widest text-brand-purple uppercase mb-3">
-        {{ page.date }}
-      </div>
-      <h1 class="text-4xl font-serif font-bold text-gray-900 leading-tight">
-        {{ page.title }}
-      </h1>
-    </header>
-
-    <div v-if="page.image" class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm">
-      <img :src="page.image" :alt="page.title" class="w-full h-full object-cover" />
+    <div v-if="status === 'pending'" class="text-center py-20 text-gray-400">
+      <Icon name="svg-spinners:180-ring" class="w-10 h-10 mx-auto mb-4" />
+      <p>Loading article...</p>
     </div>
 
-    <article class="prose prose-lg prose-gray max-w-none hover:prose-a:text-brand-purple">
-      <ContentRenderer :value="page" />
+    <article v-else-if="post">
+      <header class="mb-10 text-center">
+        <div class="text-xs font-bold tracking-widest text-brand-purple uppercase mb-3">
+          {{ new Date(post.date).toLocaleDateString('en-GB') }}
+        </div>
+        <h1 class="text-4xl font-serif font-bold text-gray-900 leading-tight">
+          {{ post.title }}
+        </h1>
+      </header>
+
+      <div v-if="post.image" class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-100">
+        <NuxtImg
+          :src="post.image"
+          :alt="post.title"
+          format="webp"
+          loading="eager"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="prose prose-lg prose-gray max-w-none hover:prose-a:text-brand-purple mx-auto text-gray-600">
+        <ContentRenderer :value="post" />
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+        <NuxtLink to="/blog" class="py-2 text-sm font-bold text-brand-purple hover:underline inline-flex items-center gap-2">
+          <Icon name="ph:arrow-left" /> Back to Journal
+        </NuxtLink>
+      </div>
     </article>
 
-    <div class="mt-12 pt-8 border-t border-gray-100 text-center">
-      <NuxtLink to="/blog" class="text-sm font-bold text-brand-purple hover:underline">
-        ← Back to Journal
+    <div v-else class="text-center py-20">
+      <h1 class="text-3xl font-bold text-gray-300">Article not found</h1>
+      <NuxtLink to="/blog" class="text-brand-purple mt-4 inline-block hover:underline">
+        Back to Journal
       </NuxtLink>
     </div>
   </div>

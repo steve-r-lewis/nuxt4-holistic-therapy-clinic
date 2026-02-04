@@ -129,7 +129,7 @@ const sendMessage = async () => {
       >
         <Icon v-if="status === 'sending'" name="ph:spinner-gap" class="animate-spin mr-2" />
         <span v-if="status === 'sending'">Sending...</span>
-        <span v-else>Send Message</span>
+        <span v-else class="py-3">Send Message</span>
       </button>
     </form>
 

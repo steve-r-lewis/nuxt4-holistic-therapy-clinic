@@ -25,7 +25,6 @@
  */
 
 const route = useRoute();
-// [REMOVED] const config = useRuntimeConfig() -> We don't need this anymore
 
 // 1. Fetch Content
 const { data: page } = await useAsyncData(route.path, () =>
@@ -37,7 +36,7 @@ if (!page.value) {
 }
 
 // 2. Get Site URL from the SEO Module
-const siteConfig = useSiteConfig() // [NEW] Standardized way to get the URL
+const siteConfig = useSiteConfig();
 const siteUrl = siteConfig.url || 'https://holistictherapyclinic.co.uk';
 
 // 3. Compute Absolute Image URL
@@ -52,13 +51,11 @@ const isFallback = computed(() => !page.value?.image);
 useSeoMeta({
   title: `${page.value.title} | Holistic Therapy Clinic`,
   description: page.value.description,
-  image: page.value?.image, // [NEW] Add to SEO metadata
 
   // Socials
   ogTitle: page.value.title,
   ogDescription: page.value.description,
-  ogImage: socialImage,
-  // [REMOVED] ogUrl -> The module generates this (and the canonical tag) automatically
+  ogImage:  page.value?.image,
   ogType: 'article',
   ogSiteName: 'Holistic Therapy Clinic',
 
@@ -92,10 +89,14 @@ useSchemaOrg([
     </header>
 
     <div class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center">
-      <img
+      <NuxtImg
+        v-if="displayImage"
         :src="displayImage"
         :alt="page.title"
-        class="w-full h-full"
+        format="webp"
+        loading="lazy"
+        sizes="100vw sm:50vw md:33vw"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
         :class="isFallback ? 'object-contain p-12 opacity-50' : 'object-cover'"
       />
     </div>
@@ -105,7 +106,7 @@ useSchemaOrg([
     </article>
 
     <div class="mt-12 pt-8 border-t border-gray-100 text-center">
-      <NuxtLink to="/therapies" class="text-sm font-bold text-brand-purple hover:underline">
+      <NuxtLink to="/therapies" class="py-2 text-sm font-bold text-brand-purple hover:underline">
         ← Back to Treatments
       </NuxtLink>
     </div>

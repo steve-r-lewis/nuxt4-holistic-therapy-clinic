@@ -112,7 +112,7 @@ useSchemaOrg([
             <NuxtLink
               v-if="t.relatedPost"
               :to="`/treatments/${t.relatedPost}`"
-              class="inline-flex items-center text-sm font-bold text-brand-purple hover:text-purple-700 transition"
+              class="py-2 inline-flex items-center text-sm font-bold text-brand-purple hover:text-purple-700 transition"
             >
               Learn More
               <Icon name="ph:arrow-right" class="ml-2 group-hover:translate-x-1 transition" />
@@ -132,10 +132,6 @@ useSchemaOrg([
       <p class="text-gray-600 max-w-lg">
         Book your appointment today and take the first step towards a balanced, pain-free life.
       </p>
-<!--      <button class="bg-brand-purple text-white px-8 py-3 rounded-full text-sm font-medium shadow-md hover:opacity-90 hover:shadow-lg transition cursor-pointer flex items-center gap-2">-->
-<!--        <Icon name="lucide:calendar-check-2" class="w-4 h-4" />-->
-<!--        Book an Appointment-->
-<!--      </button>-->
     </div>
   </div>
 </template>
