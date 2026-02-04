@@ -19,10 +19,3 @@
   # Extends timeout for complex Nitro/SQLite initializations
   node_bundler = "esbuild"
   external_node_modules = ["better-sqlite3"]
-
-
-# netlify.toml
-
-[build]
-  command = "npm run build"
-  publish = "dist"
