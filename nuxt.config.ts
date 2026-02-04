@@ -248,7 +248,13 @@ export default defineNuxtConfig({
    */
   nitro: {
     //dev: true,  // Ensure Nitro HMR is active
-    preset: 'netlify'
+
+    preset: 'netlify',
+
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    }
   },
 
   /**
