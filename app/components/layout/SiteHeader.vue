@@ -26,7 +26,7 @@
 
 // NEW (Correct for Data Files)
 const { data: header } = await useAsyncData('site-header', () =>
-  queryCollection('layout').where('stem', '=', 'header').first()
+  queryCollection('layout').where('stem', '=', 'layout/header').first()
 )
 </script>
 
@@ -34,7 +34,6 @@ const { data: header } = await useAsyncData('site-header', () =>
   <header class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto bg-white/90 backdrop-blur-sm sticky top-0 z-50">
 
     <div v-if="header" class="flex items-center gap-10 w-full justify-between">
-
       <div class="flex items-center gap-10">
         <NuxtLink :to="header.logo?.link || '/'" class="flex items-center gap-2 font-serif text-2xl font-bold text-gray-800 tracking-tight">
           <img
