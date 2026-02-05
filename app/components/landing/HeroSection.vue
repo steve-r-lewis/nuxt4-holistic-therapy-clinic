@@ -24,14 +24,36 @@
  * ================================================================================
  */
 
-// Fetch the hero data from the 'landing' collection
+// DEBUGGING: Fetch EVERYTHING in the collection to see what exists
+const { data: debugData, error } = await useAsyncData('debug-hero', () =>
+  queryCollection('landing').all()
+);
+
+// NEW (Correct for Data Files)
 const { data: hero } = await useAsyncData('hero-section', () =>
-  queryCollection('landing').path('/hero').first()
+  queryCollection('landing').where('stem', '=', 'landing/hero').first()
 )
 </script>
 
 <template>
   <section class="bg-stone-50 rounded-[2rem] p-8 lg:p-12 border border-stone-100">
+    <div class="fixed top-20 left-0 bg-black text-white p-6 z-[9999] max-w-lg overflow-auto max-h-[80vh] opacity-90">
+      <h3 class="font-bold text-red-400 mb-2">DEBUG REPORT</h3>
+
+      <div class="mb-4">
+        <strong>Target Query (hero):</strong>
+        <span :class="hero ? 'text-green-400' : 'text-red-400'">{{ hero ? 'FOUND' : 'NULL' }}</span>
+      </div>
+
+      <div class="mb-4">
+        <strong>Collection Contents ({{ debugData?.length || 0 }} items):</strong>
+        <pre class="text-xs mt-2 text-gray-300">{{ debugData }}</pre>
+      </div>
+
+      <div v-if="error">
+        <strong>Error:</strong> {{ error }}
+      </div>
+    </div>
 
     <div v-if="hero" class="grid lg:grid-cols-2 gap-16 items-center">
       <div>

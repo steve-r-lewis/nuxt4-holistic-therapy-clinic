@@ -24,9 +24,9 @@
  * ================================================================================
  */
 
-// Fetch header data from 'layout' collection
+// NEW (Correct for Data Files)
 const { data: header } = await useAsyncData('site-header', () =>
-  queryCollection('layout').path('/header').first()
+  queryCollection('layout').where('stem', '=', 'header').first()
 )
 </script>
 
