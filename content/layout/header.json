@@ -1,0 +1,19 @@
+{
+  "logo": {
+    "text": "Holistic Therapy Clinic",
+    "image": "/logo.png",
+    "alt": "Holistic Therapy Clinic Logo",
+    "link": "/"
+  },
+  "navigation": [
+    { "label": "Home", "to": "/" },
+    { "label": "Therapies", "to": "/therapies" },
+    { "label": "Our Story", "to": "/about" },
+    { "label": "Journal", "to": "/blog" }
+  ],
+  "cta": {
+    "label": "Contact",
+    "to": "/contact",
+    "style": "link"
+  }
+}

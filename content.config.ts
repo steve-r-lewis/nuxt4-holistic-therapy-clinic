@@ -64,6 +64,53 @@ export default defineContentConfig({
         // [NEW] Optional image for the detail page
         image: z.string().optional()
       })
+    }),
+
+    // [NEW] Add this Landing collection
+    landing: defineCollection({
+      type: 'data', // 'data' type is perfect for JSON singleton files
+      source: 'landing/*.json',
+      schema: z.object({
+        badge: z.string(),
+        title: z.string(),
+        description: z.string(),
+        image: z.string(),
+        imageAlt: z.string(),
+        promo: z.object({
+          badge: z.string(),
+          text: z.string(),
+          link: z.string(),
+          linkText: z.string()
+        }),
+        features: z.array(z.object({
+          title: z.string(),
+          text: z.string(),
+          icon: z.string()
+        }))
+      })
+    }),
+
+    // [NEW] Layout collection for Header & Footer
+    layout: defineCollection({
+      type: 'data',
+      source: 'layout/*.json',
+      schema: z.object({
+        logo: z.object({
+          text: z.string(),
+          image: z.string(),
+          alt: z.string(),
+          link: z.string()
+        }).optional(),
+        navigation: z.array(z.object({
+          label: z.string(),
+          to: z.string()
+        })),
+        cta: z.object({
+          label: z.string(),
+          to: z.string(),
+          style: z.string().optional()
+        }).optional()
+      })
     })
   }
 })

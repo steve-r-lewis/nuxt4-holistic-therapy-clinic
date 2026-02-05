@@ -24,47 +24,58 @@
  * ================================================================================
  */
 
-const links = [
-  { label: 'Home', to: '/' },
-  { label: 'Therapies', to: '/therapies' },
-  { label: 'Our Story', to: '/about' },
-  { label: 'Journal', to: '/blog' }, // Geared towards the "static blog" requirement
-];
+// Fetch header data from 'layout' collection
+const { data: header } = await useAsyncData('site-header', () =>
+  queryCollection('layout').path('/header').first()
+)
 </script>
 
 <template>
   <header class="w-full px-6 py-5 flex justify-between items-center max-w-7xl mx-auto bg-white/90 backdrop-blur-sm sticky top-0 z-50">
-    <div class="flex items-center gap-10">
-      <NuxtLink to="/" class="py-2 flex items-center gap-2 font-serif text-2xl font-bold text-gray-800 tracking-tight">
-        <NuxtImg
-          src="/logo.png"
-          alt="Holistic Therapy Clinic Logo"
-          width="40"
-          height="40"
-          format="webp"
-          loading="eager"
-          class="w-10 h-10 object-contain"
-        />
 
-        Holistic Therapy Clinic
-      </NuxtLink>
+    <div v-if="header" class="flex items-center gap-10 w-full justify-between">
 
-      <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-        <NuxtLink
-          v-for="link in links"
-          :key="link.to"
-          :to="link.to"
-          class="py-2 block hover:text-brand-purple hover:underline underline-offset-4 transition-all"
-        >
-          {{ link.label }}
+      <div class="flex items-center gap-10">
+        <NuxtLink :to="header.logo?.link || '/'" class="flex items-center gap-2 font-serif text-2xl font-bold text-gray-800 tracking-tight">
+          <img
+            v-if="header.logo?.image"
+            :src="header.logo.image"
+            :alt="header.logo.alt"
+            class="w-10 h-10 object-contain"
+          />
+          {{ header.logo?.text }}
         </NuxtLink>
-      </nav>
+
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+          <NuxtLink
+            v-for="link in header.navigation"
+            :key="link.to"
+            :to="link.to"
+            class="hover:text-brand-purple hover:underline underline-offset-4 transition-all"
+          >
+            {{ link.label }}
+          </NuxtLink>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <NuxtLink
+          v-if="header.cta"
+          :to="header.cta.to"
+          class="hidden sm:block text-sm font-medium text-gray-600 hover:text-brand-purple transition"
+        >
+          {{ header.cta.label }}
+        </NuxtLink>
+      </div>
     </div>
 
-    <div class="flex items-center gap-4">
-      <NuxtLink to="/contact" class="py-2 hidden sm:block text-sm font-medium text-gray-600 hover:text-brand-purple transition">
-        Contact
-      </NuxtLink>
+    <div v-else class="flex items-center justify-between w-full animate-pulse">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+        <div class="w-48 h-6 bg-gray-200 rounded"></div>
+      </div>
+      <div class="hidden sm:block w-20 h-4 bg-gray-200 rounded"></div>
     </div>
+
   </header>
 </template>
