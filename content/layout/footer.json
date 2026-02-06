@@ -1,0 +1,21 @@
+{
+  "logo": {
+    "text": "Holistic Therapy Clinic",
+    "image": "/logo.png",
+    "alt": "Holistic Therapy Clinic Logo",
+    "link": "/"
+  },
+  "navigation": [
+    { "label": "Home", "to": "/" },
+    { "label": "Treatments", "to": "/therapies" },
+    { "label": "Wellness Journal", "to": "/blog" },
+    { "label": "Contact Us", "to": "/contact" },
+    { "label": "Privacy Policy", "to": "/privacy" }
+  ],
+  "socials": [
+    { "icon": "lucide:instagram", "link": "#", "label": "Instagram" },
+    { "icon": "lucide:facebook", "link": "#", "label": "Facebook" },
+    { "icon": "lucide:twitter", "link": "#", "label": "Twitter" }
+  ],
+  "copyrightText": "Holistic Therapy Clinic. All rights reserved."
+}

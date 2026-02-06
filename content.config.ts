@@ -91,6 +91,28 @@ export default defineContentConfig({
     }),
 
     // [NEW] Layout collection for Header & Footer
+    // layout: defineCollection({
+    //   type: 'data',
+    //   source: 'layout/*.json',
+    //   schema: z.object({
+    //     logo: z.object({
+    //       text: z.string(),
+    //       image: z.string(),
+    //       alt: z.string(),
+    //       link: z.string()
+    //     }).optional(),
+    //     navigation: z.array(z.object({
+    //       label: z.string(),
+    //       to: z.string()
+    //     })),
+    //     cta: z.object({
+    //       label: z.string(),
+    //       to: z.string(),
+    //       style: z.string().optional()
+    //     }).optional()
+    //   })
+    // })
+
     layout: defineCollection({
       type: 'data',
       source: 'layout/*.json',
@@ -105,6 +127,14 @@ export default defineContentConfig({
           label: z.string(),
           to: z.string()
         })),
+        // [NEW] Additions for Footer
+        socials: z.array(z.object({
+          icon: z.string(),
+          link: z.string(),
+          label: z.string()
+        })).optional(),
+        copyrightText: z.string().optional(),
+        // [Existing]
         cta: z.object({
           label: z.string(),
           to: z.string(),

@@ -25,66 +25,63 @@
  */
 
 const currentYear = new Date().getFullYear();
+
+// Fetch footer data
+const { data: footer } = await useAsyncData('site-footer', () =>
+  queryCollection('layout').where('stem', '=', 'layout/footer').first()
+)
 </script>
 
 <template>
   <footer class="border-t border-gray-100 mt-24 py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <div v-if="footer" class="max-w-7xl mx-auto px-6 text-center">
+
       <div class="flex justify-center items-center gap-2 mb-6 text-gray-900">
         <NuxtImg
-          src="/logo.png"
-          alt="Holistic Therapy Clinic Logo"
+          v-if="footer.logo?.image"
+          :src="footer.logo.image"
+          :alt="footer.logo.alt"
           width="40"
           height="40"
           format="webp"
           loading="lazy"
           class="w-10 h-10 object-contain"
         />
-
-        <span class="font-serif font-bold text-xl tracking-tight">Holistic Therapy Clinic</span>
+        <span class="font-serif font-bold text-xl tracking-tight">
+          {{ footer.logo?.text }}
+        </span>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-8 mb-8 text-gray-600 font-medium text-sm">
-        <NuxtLink to="/" class="py-2 block hover:text-brand-purple transition">
-          Home
+      <nav class="flex flex-wrap justify-center gap-8 mb-8 text-gray-600 font-medium text-sm">
+        <NuxtLink
+          v-for="link in footer.navigation"
+          :key="link.to"
+          :to="link.to"
+          class="py-2 block hover:text-brand-purple transition"
+        >
+          {{ link.label }}
         </NuxtLink>
-
-        <NuxtLink to="/therapies" class="py-2 block hover:text-brand-purple transition">
-          Treatments
-        </NuxtLink>
-
-        <NuxtLink to="/blog" class="py-2 block hover:text-brand-purple transition">
-          Wellness Journal
-        </NuxtLink>
-
-        <NuxtLink to="/contact" class="py-2 block hover:text-brand-purple transition">
-          Contact Us
-        </NuxtLink>
-
-        <NuxtLink to="/privacy" class="py-2 block hover:text-brand-purple transition">
-          Privacy Policy
-        </NuxtLink>
-      </div>
+      </nav>
 
       <div class="border-t border-gray-100 pt-8 flex flex-col items-center gap-4">
-        <div class="flex gap-6 text-gray-400">
-          <NuxtLink to="#" class="py-2 block hover:text-brand-purple transition" aria-label="Instagram">
-            <Icon name="lucide:instagram" class="w-5 h-5" />
-          </NuxtLink>
 
-          <NuxtLink to="#" class="py-2 block hover:text-brand-purple transition" aria-label="Facebook">
-            <Icon name="lucide:facebook" class="w-5 h-5" />
-          </NuxtLink>
-
-          <NuxtLink to="#" class="py-2 block hover:text-brand-purple transition" aria-label="Twitter">
-            <Icon name="lucide:twitter" class="w-5 h-5" />
-          </NuxtLink>
-        </div>
+        <SharedSocialLinks
+          v-if="footer.socials"
+          :items="footer.socials"
+        />
 
         <p class="text-sm text-gray-400">
-          © {{ currentYear }} Holistic Therapy Clinic. All rights reserved.
+          © {{ currentYear }} {{ footer.copyrightText }}
         </p>
       </div>
     </div>
+
+    <div v-else class="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center gap-6 animate-pulse">
+      <div class="h-10 w-48 bg-gray-200 rounded"></div>
+      <div class="h-4 w-96 bg-gray-200 rounded"></div>
+      <div class="h-4 w-32 bg-gray-200 rounded mt-8"></div>
+    </div>
+
   </footer>
 </template>
