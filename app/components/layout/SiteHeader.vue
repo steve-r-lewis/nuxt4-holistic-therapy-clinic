@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/components/layout/SiteHeader.vue
- * @version:    1.1.0
+ * @version:    1.2.0
  * @createDate: 2026 Jan 22
  * @createTime: 23:21
  * @author:     Steve R Lewis
@@ -17,6 +17,11 @@
  * ================================================================================
  *
  * @notes: Revision History
+ *
+ * V1.2.0, 20260212
+ * - Changed breakpoint from md (768px) to lg (1024px) to better support landscape phones.
+ * - Added whitespace-nowrap to links to prevent text splitting.
+ * - Added overflow-y-auto to mobile menu for short landscape screens.
  *
  * V1.1.0, 20260212
  * - Added mobile navigation menu and toggle functionality.
@@ -41,10 +46,17 @@ const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 };
 
+// Lock body scroll when mobile menu is open
+watch(isMobileMenuOpen, (isOpen) => {
+  if (import.meta.client) {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  }
+});
+
 // NEW (Correct for Data Files)
 const { data: header } = await useAsyncData('site-header', () =>
   queryCollection('layout').where('stem', '=', 'layout/header').first()
-)
+);
 </script>
 
 <template>
@@ -52,22 +64,22 @@ const { data: header } = await useAsyncData('site-header', () =>
 
     <div v-if="header" class="flex items-center gap-10 w-full justify-between">
       <div class="flex items-center gap-10">
-        <NuxtLink :to="header.logo?.link || '/'" class="flex items-center gap-2 font-serif text-2xl font-bold text-gray-800 tracking-tight z-50 relative">
+        <NuxtLink :to="header.logo?.link || '/'" class="flex items-center gap-2 font-serif text-2xl font-bold text-gray-800 tracking-tight z-50 relative shrink-0">
           <img
             v-if="header.logo?.image"
             :src="header.logo.image"
             :alt="header.logo.alt"
             class="w-10 h-10 object-contain"
           />
-          {{ header.logo?.text }}
+          <span class="whitespace-nowrap">{{ header.logo?.text }}</span>
         </NuxtLink>
 
-        <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+        <nav class="hidden lg:flex gap-8 text-sm font-medium text-gray-600">
           <NuxtLink
             v-for="link in header.navigation"
             :key="link.to"
             :to="link.to"
-            class="hover:text-brand-purple hover:underline underline-offset-4 transition-all"
+            class="hover:text-brand-purple hover:underline underline-offset-4 transition-all whitespace-nowrap"
           >
             {{ link.label }}
           </NuxtLink>
@@ -78,14 +90,14 @@ const { data: header } = await useAsyncData('site-header', () =>
         <NuxtLink
           v-if="header.cta"
           :to="header.cta.to"
-          class="hidden sm:block text-sm font-medium text-gray-600 hover:text-brand-purple transition"
+          class="hidden lg:block text-sm font-medium text-gray-600 hover:text-brand-purple transition whitespace-nowrap"
         >
           {{ header.cta.label }}
         </NuxtLink>
 
         <button
           @click="toggleMobileMenu"
-          class="md:hidden relative z-50 p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+          class="lg:hidden relative z-50 p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
           aria-label="Toggle mobile menu"
         >
           <div class="w-6 h-6 flex flex-col justify-center gap-1.5">
@@ -124,14 +136,14 @@ const { data: header } = await useAsyncData('site-header', () =>
     >
       <div
         v-if="isMobileMenuOpen && header"
-        class="fixed inset-0 top-[80px] bg-white z-40 md:hidden flex flex-col px-6 py-8 border-t border-gray-100 h-[calc(100vh-80px)]"
+        class="fixed inset-0 top-[80px] bg-white z-40 lg:hidden flex flex-col px-6 py-8 border-t border-gray-100 h-[calc(100vh-80px)] overflow-y-auto"
       >
-        <nav class="flex flex-col gap-6 text-lg font-medium text-gray-800">
+        <nav class="flex flex-col gap-6 text-lg font-medium text-gray-800 pb-10">
           <NuxtLink
             v-for="link in header.navigation"
             :key="link.to"
             :to="link.to"
-            class="py-2 border-b border-gray-50 hover:text-brand-purple transition-colors"
+            class="py-2 border-b border-gray-50 hover:text-brand-purple transition-colors whitespace-nowrap"
             @click="isMobileMenuOpen = false"
           >
             {{ link.label }}
@@ -140,7 +152,7 @@ const { data: header } = await useAsyncData('site-header', () =>
           <NuxtLink
             v-if="header.cta"
             :to="header.cta.to"
-            class="sm:hidden py-2 text-brand-purple font-semibold"
+            class="lg:hidden py-2 text-brand-purple font-semibold whitespace-nowrap"
             @click="isMobileMenuOpen = false"
           >
             {{ header.cta.label }}
