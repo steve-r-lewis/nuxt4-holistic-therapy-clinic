@@ -38,7 +38,7 @@ useHead({
         Holistic Therapy Clinic began with a simple belief: that the body has an innate intelligence to heal itself when given the right space and support.
       </p>
 
-      <p>
+      <p class="text-lg leading-relaxed">
         Founded in 2000, my clinic moves away from the "rush-in, rush-out" mentality of modern spas.
         I focus on slow, deliberate practice, ensuring every client feels heard, understood, and restored.
       </p>
@@ -56,26 +56,26 @@ useHead({
 
     <div class="prose prose-gray max-w-none text-gray-600">
       <p class="text-lg leading-relaxed">
-        My appetite for learning only grew as I sought to understand the 'why' behind my clients' pain. This led to a year of Clinical & Remedial Studies at The Middlesex School of Complementary Medicine, focusing on common overuse conditions like tennis elbow. To deepen my expertise, I completed a two-year Sports Therapy qualification at the Raworth Centre. This training was invaluable, integrating nutrition, gait analysis, and specialized bodywork to create a truly holistic approach to recovery.
+        My appetite for learning only grew as I sought to understand the 'why' behind my clients' pain. This led to a year of Clinical & Remedial Studies at The Middlesex School of Complementary Medicine, focusing on common overuse conditions like tennis elbow. To deepen my expertise, I completed a two-year Sports Therapy qualification at the Raworth Centre. This training was invaluable, integrating nutrition, gait analysis, and specialised bodywork to create a truly holistic approach to recovery.
       </p>
     </div>
 
-    <div>
-      <p>
+    <div class="prose prose-gray max-w-none text-gray-600">
+      <p class="text-lg leading-relaxed">
         A key focus of my work is Fascia, the body’s interconnected support network that wraps every muscle, organ, bone, and nerve.
       </p>
 
-      <p>
+      <p class="text-lg leading-relaxed">
         When fascia becomes restricted due to injury, stress, or posture, it limits your movement and sensation. By using targeted techniques that address both the fascial and muscular layers, I help release built-up tension, ease chronic pain, and restore your body’s natural mobility.
       </p>
 
-      <p>
+      <p class="text-lg leading-relaxed">
         Understanding the connection between body and tissue has transformed how I approach treatment, allowing me to address not just where you hurt, but why you hurt—and how we can work together to help you feel better.
       </p>
     </div>
 
     <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100 mt-8">
-      <h2 class="font-bold text-gray-900 mb-2">Our Philosophy</h2>
+      <h2 class="font-bold text-gray-900 mb-2">My Philosophy</h2>
       <p class="text-gray-600 italic">"Wellness is not a luxury; it is a necessity for a balanced life."</p>
     </div>
   </div>
