@@ -106,7 +106,11 @@ useSchemaOrg([
     </article>
 
     <div class="mt-12 pt-8 border-t border-gray-100 text-center">
-      <NuxtLink to="/therapies" class="py-2 text-sm font-bold text-brand-purple hover:underline">
+      <NuxtLink
+        to="/therapies"
+        class="py-2 text-sm font-bold text-brand-purple hover:underline"
+        aria-label="Return to the list of treatments and services"
+      >
         ← Back to Treatments
       </NuxtLink>
     </div>
