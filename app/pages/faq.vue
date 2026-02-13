@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/pages/faq.vue
- * @version:    1.1.0
+ * @version:    1.2.0
  * @createDate: 2026 Feb 13
  * @createTime: 00:05
  * @author:     Steve R Lewis
@@ -20,6 +20,10 @@
  * ================================================================================
  *
  * @notes: Revision History
+ *
+ * V1.2.0, 20260213
+ * - Added explicit Tailwind styling for Markdown lists (ul, ol, li) which were
+ * previously being stripped by the Tailwind reset.
  *
  * V1.1.0, 20260213
  * - Implemented <MDC> component to correctly render Markdown formatting from JSON data.
@@ -58,6 +62,51 @@ useHead({
 <template>
   <div class="bg-white py-16 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      <div class="mb-10 text-center">
+        <p class="text-xl font-serif font-bold leading-10 tracking-tight text-gray-900">
+          Your Appointment:
+        </p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          What to expect
+        </p>
+      </div>
+
+      <div class="mb-10 text-center">
+        <p class="text-lg font-serif font-bold leading-10 tracking-tight text-gray-900">
+          Treatment Duration:
+        </p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          I value your recovery. The time listed for each massage is the **actual treatment time**. Please allow an additional 10–15 minutes for your initial consultation, postural assessment, and post-treatment advice.
+        </p>
+      </div>
+
+      <div class="mb-10 text-center">
+        <p class="text-lg font-serif font-bold leading-10 tracking-tight text-gray-900">
+          First Appointments:
+        </p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          Your first visit will include a comprehensive health intake. There is no extra charge for this—it’s part of my commitment to safe, effective care.
+        </p>
+      </div>
+
+      <div class="mb-10 text-center">
+        <p class="text-lg font-serif font-bold leading-10 tracking-tight text-gray-900">
+          Arrival:
+        </p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          Please arrive precisely at your appointment time. Early arrival is not necessary as I allow a buffer between clients to ensure the room is fully sanitised and ready for you.
+        </p>
+      </div>
+
+      <div class="mb-10 text-center">
+        <p class="text-lg font-serif font-bold leading-10 tracking-tight text-gray-900">
+          Cancellations:
+        </p>
+        <p class="mt-6 text-base leading-7 text-gray-600">
+          As a small business, "no-shows" have a big impact. Please provide at least 24 hours' notice if you need to reschedule.
+        </p>
+      </div>
 
       <div v-if="faq" class="mx-auto max-w-4xl divide-y divide-gray-900/10">
         <div class="mb-10 text-center">
@@ -102,7 +151,13 @@ useHead({
                 <MDC
                   :value="item.answer"
                   tag="div"
-                  class="text-base leading-7 text-gray-600 space-y-4 [&>p]:mb-4 [&>p:last-child]:mb-0 [&>strong]:font-bold [&>strong]:text-gray-900 [&>em]:italic"
+                  class="text-base leading-7 text-gray-600 space-y-4
+                         [&>p]:mb-4 [&>p:last-child]:mb-0
+                         [&>strong]:font-bold [&>strong]:text-gray-900
+                         [&>em]:italic
+                         [&>ul]:list-disc [&>ul]:ml-5 [&>ul]:mb-4
+                         [&>ol]:list-decimal [&>ol]:ml-5 [&>ol]:mb-4
+                         [&>li]:mb-1 [&>li]:pl-1"
                 />
               </dd>
             </Transition>
