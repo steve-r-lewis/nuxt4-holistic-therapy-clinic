@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/pages/faq.vue
- * @version:    1.0.0
+ * @version:    1.1.0
  * @createDate: 2026 Feb 13
  * @createTime: 00:05
  * @author:     Steve R Lewis
@@ -15,9 +15,15 @@
  * FAQ Page component. Fetches data from the 'faq' content collection and
  * displays it in an accordion layout.
  *
+ * Uses <MDC> to render markdown content within the JSON answers.
+ *
  * ================================================================================
  *
  * @notes: Revision History
+ *
+ * V1.1.0, 20260213
+ * - Implemented <MDC> component to correctly render Markdown formatting from JSON data.
+ * - Added specific styling for generated markdown tags (strong, em, p).
  *
  * V1.0.0, 20260213-00:05
  * Initial creation and release of faq.vue
@@ -31,7 +37,7 @@ const { data: faq } = await useAsyncData('faq-page', () =>
 );
 
 // Accordion state management
-const openIndex = ref<number | null>(0) // Open the first item by default
+const openIndex = ref<number | null>(0); // Open the first item by default
 
 const toggleAccordion = (index: number) => {
   if (openIndex.value === index) {
@@ -46,37 +52,11 @@ useHead({
   meta: [
     { name: 'description', content: faq.value?.description || 'Frequently Asked Questions' }
   ]
-})
+});
 </script>
 
 <template>
   <div class="bg-white py-16 sm:py-24">
-
-    <h1 class="text-4xl font-serif font-bold text-gray-900">Your Appointment: What to Expect</h1>
-
-    <div class="prose prose-gray max-w-none text-gray-600">
-
-      <h2 class="sm:text-2xl text-4xl font-serif font-bold text-gray-900">Full Hands-on Time:</h2>
-      <p class="text-lg leading-relaxed">
-        I value your recovery. The time listed for each massage is the **actual treatment time**. Please allow an additional 10–15 minutes for your initial consultation, postural assessment, and post-treatment advice.
-      </p>
-
-      <h2 class="text-4xl font-serif font-bold text-gray-900">First Appointments:</h2>
-      <p class="text-lg leading-relaxed">
-        Your first visit will include a comprehensive health intake. There is no extra charge for this—it’s part of my commitment to safe, effective care.
-      </p>
-
-      <h2 class="text-4xl font-serif font-bold text-gray-900">Arrival:</h2>
-      <p class="text-lg leading-relaxed">
-        Please arrive precisely at your appointment time. Early arrival is not necessary as I allow a buffer between clients to ensure the room is fully sanitised and ready for you.
-      </p>
-
-      <h2 class="text-4xl font-serif font-bold text-gray-900">Cancellations:</h2>
-      <p class="text-lg leading-relaxed">
-        As a small business, "no-shows" have a big impact. Please provide at least 24 hours' notice if you need to reschedule.
-      </p>
-    </div>
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
       <div v-if="faq" class="mx-auto max-w-4xl divide-y divide-gray-900/10">
@@ -119,9 +99,11 @@ useHead({
               leave-to-class="transform scale-95 opacity-0 -translate-y-2"
             >
               <dd v-if="openIndex === index" class="mt-2 pr-12">
-                <p class="text-base leading-7 text-gray-600">
-                  {{ item.answer }}
-                </p>
+                <MDC
+                  :value="item.answer"
+                  tag="div"
+                  class="text-base leading-7 text-gray-600 space-y-4 [&>p]:mb-4 [&>p:last-child]:mb-0 [&>strong]:font-bold [&>strong]:text-gray-900 [&>em]:italic"
+                />
               </dd>
             </Transition>
           </div>
@@ -141,7 +123,3 @@ useHead({
     </div>
   </div>
 </template>
-
-<style scoped>
-/* TODO: Add component-specific styles for LayoutDevelopment if utility classes are insufficient. */
-</style>
