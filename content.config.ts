@@ -90,28 +90,19 @@ export default defineContentConfig({
       })
     }),
 
-    // [NEW] Layout collection for Header & Footer
-    // layout: defineCollection({
-    //   type: 'data',
-    //   source: 'layout/*.json',
-    //   schema: z.object({
-    //     logo: z.object({
-    //       text: z.string(),
-    //       image: z.string(),
-    //       alt: z.string(),
-    //       link: z.string()
-    //     }).optional(),
-    //     navigation: z.array(z.object({
-    //       label: z.string(),
-    //       to: z.string()
-    //     })),
-    //     cta: z.object({
-    //       label: z.string(),
-    //       to: z.string(),
-    //       style: z.string().optional()
-    //     }).optional()
-    //   })
-    // })
+    // [NEW] FAQ Collection
+    faq: defineCollection({
+      type: 'data',
+      source: 'landing/faq.json',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        items: z.array(z.object({
+          question: z.string(),
+          answer: z.string()
+        }))
+      })
+    }),
 
     layout: defineCollection({
       type: 'data',

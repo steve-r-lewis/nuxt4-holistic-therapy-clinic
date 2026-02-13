@@ -7,9 +7,11 @@
   },
   "navigation": [
     { "label": "Home", "to": "/" },
-    { "label": "Treatments", "to": "/therapies" },
-    { "label": "Wellness Journal", "to": "/blog" },
-    { "label": "Contact Us", "to": "/contact" },
+    { "label": "Therapies", "to": "/therapies" },
+    { "label": "My Story", "to": "/about" },
+    { "label": "Journal", "to": "/blog" },
+    { "label": "FAQ", "to": "/faq" },
+    { "label": "Contact", "to": "/contact" },
     { "label": "Privacy Policy", "to": "/privacy" }
   ],
   "socials": [

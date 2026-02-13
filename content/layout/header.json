@@ -9,7 +9,8 @@
     { "label": "Home", "to": "/" },
     { "label": "Therapies", "to": "/therapies" },
     { "label": "My Story", "to": "/about" },
-    { "label": "Journal", "to": "/blog" }
+    { "label": "Journal", "to": "/blog" },
+    { "label": "FAQ", "to": "/faq" }
   ],
   "cta": {
     "label": "Contact",
