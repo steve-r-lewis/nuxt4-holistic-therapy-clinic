@@ -51,6 +51,32 @@ useHead({
 
 <template>
   <div class="bg-white py-16 sm:py-24">
+
+    <h1 class="text-4xl font-serif font-bold text-gray-900">Your Appointment: What to Expect</h1>
+
+    <div class="prose prose-gray max-w-none text-gray-600">
+
+      <h2 class="text-4xl font-serif font-bold text-gray-900">Full Hands-on Time:</h2>
+      <p class="text-lg leading-relaxed">
+        I value your recovery. The time listed for each massage is the **actual treatment time**. Please allow an additional 10–15 minutes for your initial consultation, postural assessment, and post-treatment advice.
+      </p>
+
+      <h2 class="text-4xl font-serif font-bold text-gray-900">First Appointments:</h2>
+      <p class="text-lg leading-relaxed">
+        Your first visit will include a comprehensive health intake. There is no extra charge for this—it’s part of my commitment to safe, effective care.
+      </p>
+
+      <h2 class="text-4xl font-serif font-bold text-gray-900">Arrival:</h2>
+      <p class="text-lg leading-relaxed">
+        Please arrive precisely at your appointment time. Early arrival is not necessary as I allow a buffer between clients to ensure the room is fully sanitised and ready for you.
+      </p>
+
+      <h2 class="text-4xl font-serif font-bold text-gray-900">Cancellations:</h2>
+      <p class="text-lg leading-relaxed">
+        As a small business, "no-shows" have a big impact. Please provide at least 24 hours' notice if you need to reschedule.
+      </p>
+    </div>
+
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
       <div v-if="faq" class="mx-auto max-w-4xl divide-y divide-gray-900/10">
