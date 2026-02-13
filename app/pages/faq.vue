@@ -56,7 +56,7 @@ useHead({
 
     <div class="prose prose-gray max-w-none text-gray-600">
 
-      <h2 class="text-4xl font-serif font-bold text-gray-900">Full Hands-on Time:</h2>
+      <h2 class="sm:text-2xl text-4xl font-serif font-bold text-gray-900">Full Hands-on Time:</h2>
       <p class="text-lg leading-relaxed">
         I value your recovery. The time listed for each massage is the **actual treatment time**. Please allow an additional 10–15 minutes for your initial consultation, postural assessment, and post-treatment advice.
       </p>
