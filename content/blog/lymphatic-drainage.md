@@ -1,6 +1,6 @@
 ---
 title: 'The Benefits of Lymphatic Drainage'
-date: 'Oct 12, 2025'
+date: 'Jan 04, 2026'
 excerpt: 'How this gentle technique can boost your immune system.'
 ---
 
