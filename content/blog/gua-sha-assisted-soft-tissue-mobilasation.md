@@ -23,17 +23,17 @@ The goal? To create a positive "micro-trauma" under the skin. This process:
 * **Boosts Microcirculation:** Research shows it significantly increases blood flow to treated areas.  
 * **Triggers Healing:** Studies, including research from Harvard, have found that Gua Sha encourages the body to produce **HO-1**, a potent antioxidant that fights inflammation and protects your cells.
 
-### **Like a "Stethoscope" for Your Muscles**
+## **Like a "Stethoscope" for Your Muscles**
 
 One of the reasons I love using these stainless steel instruments is that they act like a stethoscope for a practitioner's hands.
 
 When I glide a tool over your shoulder or back, the instrument resonates, helping me "feel" areas of scar tissue or fibrotic "grittiness" that fingertips might miss. This allows for incredible precision. Once we find that knot, the tool helps break down stagnant tissue so your body can sweep away waste and bring in fresh, nutrient-rich blood to rebuild healthy fibers.
 
-### **The Perfect Duo**
+## **The Perfect Duo**
 
 I like to think of them as the perfect partnership. While hands-on techniques are wonderful for manipulating muscles and releasing tension, for long-held issues, I support your treatment by incorporating Gua Sha and IASTM. These techniques allow me to provide a deeper level of focus, getting straight to the root of the issue, working faster on chronic knots, and focusing directly on the health and alignment of your deep tissue
 
-### **What to Expect (The "Pink" Factor)**
+## **What to Expect (The "Pink" Factor)**
 
 After a session, you might notice some reddening of the skin or small red spots called *petechiae*. In the world of Gua Sha, we see this as a great sign\! It is a normal response indicating that stagnant blood is being brought to the surface and "toxic waste" is being cleared out. This typically fades within a few days, leaving you feeling lighter and much more mobile.
 
