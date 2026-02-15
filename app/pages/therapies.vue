@@ -43,6 +43,16 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
       to discuss your goals with your therapist.
     </p>
 
+    <p class="text-lg text-gray-600 mb-12 leading-relaxed">Advanced Recovery Technology** Integrated, where needed to accelerate your results:</p>
+
+    <ul class="text-gray-600 mb-12 leading-relaxed">
+      <li>Clinical Ultrasound:** Stimulates healing in ligaments, tendons, and muscle fibers.</li>
+      <li>Dynamic Cupping:** Decompressive suction combined with red light therapy. Improves blood flow and cellular repair.</li>
+      <li>Gua Sha:** Traditional technique to release deep-seated muscular tension.</li>
+      <li>Practical Aftercare:** Simple home movements to maintain your progress.</li>
+      <li>📞 Book Your Appointment: 07775 991523** *Gift Vouchers & Loyalty Cards Available.</li>
+    </ul>
+
     <div class="grid gap-6" v-if="treatments">
       <template v-for="t in treatments" :key="t.id">
 

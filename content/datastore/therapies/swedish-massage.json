@@ -2,5 +2,6 @@
   "name": "Swedish Massage",
   "price": "£45",
   "duration": "60 minutes",
-  "desc": "Gentle, flowing strokes to promote relaxation and improve circulation."
+  "desc": "Gentle, flowing strokes to promote relaxation and improve circulation.",
+  "relatedPost": "swedish"
 }
