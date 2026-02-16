@@ -1,6 +1,7 @@
 {
-  "name": "Hot Stone Therapy",
-  "duration": "60 minutes",
-  "price": "£45",
-  "desc": "Smooth, heated stones are placed on the body to melt away stress."
+  "name": "Hot Stone Massage Full Body (excluding face)",
+  "duration": "~85 minutes",
+  "price": "£50",
+  "desc": "Deep warmth and total muscle relaxation",
+  "relatedPost": "hot-stone-massage-full-body"
 }

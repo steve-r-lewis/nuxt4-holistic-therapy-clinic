@@ -1,3 +1,4 @@
+<script setup lang="ts">
 /**
 * ================================================================================
 *
@@ -23,6 +24,12 @@
 * ================================================================================
 */
 
+/**
+ * TODO: TypeScript code for the component goes here with suitable DocBlock type comments as necessary
+ * for new/changed logic.
+ */
+</script>
+
 <template>
   <div class="flex flex-col min-h-screen bg-white font-sans antialiased text-gray-600">
     <LayoutSiteHeader />
@@ -34,13 +41,6 @@
     <LayoutSiteFooter />
   </div>
 </template>
-
-<script setup lang="ts">
-/**
- * TODO: TypeScript code for the component goes here with suitable DocBlock type comments as necessary
- * for new/changed logic.
- */
-</script>
 
 <style scoped>
 /* TODO: Add component-specific styles for LayoutDevelopment if utility classes are insufficient. */

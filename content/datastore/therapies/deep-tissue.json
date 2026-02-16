@@ -1,6 +1,7 @@
 {
-  "name": "Deep Tissue",
-  "duration": "60 minutes",
+  "name": "Deep Tissue Treatment",
+  "duration": "~70 minutes",
   "price": "£45",
-  "desc": "Intense pressure targeting deep muscle layers to release chronic tension."
+  "desc": "Focused release of chronic muscle tension",
+  "relatedPost": "deep-tissue"
 }

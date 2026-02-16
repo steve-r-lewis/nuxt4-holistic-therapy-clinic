@@ -33,7 +33,7 @@ const { data: footer } = await useAsyncData('site-footer', () =>
 </script>
 
 <template>
-  <footer class="border-t border-gray-100 mt-24 py-12 bg-white">
+  <footer class="border-t border-gray-100 mt-12 py-12 bg-white">
 
     <div v-if="footer" class="max-w-7xl mx-auto px-6 text-center">
 
