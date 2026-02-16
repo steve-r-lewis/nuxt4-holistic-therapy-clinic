@@ -44,7 +44,7 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
     </p>
 
     <div class="text-left mb-8 max-w-3xl mx-auto">
-      <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Advanced Recovery Technology Integrated</span>, where needed to accelerate your results:</p>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Additional Therapy Technologies </span>, integrated where needed to accelerate your results:</p>
 
       <ul class="text-gray-600 mb-4 leading-relaxed">
         <li><span class="font-bold">Clinical Ultrasound:</span> Stimulates healing in ligaments, tendons, and muscle fibers.</li>

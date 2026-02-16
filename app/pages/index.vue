@@ -109,7 +109,7 @@ useSchemaOrg([
     </section>
 
     <div class="flex flex-col items-center text-center space-y-6 py-12 bg-brand-purple/5 rounded-3xl">
-      <h3 class="text-2xl font-serif font-bold text-gray-900">Ready to prioritize your wellness?</h3>
+      <h3 class="text-2xl font-serif font-bold text-gray-900">Ready to prioritise your wellness?</h3>
       <p class="text-gray-600 max-w-lg">
         Book your appointment today and take the first step towards a balanced, pain-free life.
       </p>
