@@ -86,7 +86,7 @@ useSchemaOrg([
 
       <div class="text-center mb-16 max-w-3xl mx-auto">
         <span class="text-brand-purple font-bold tracking-widest text-xs uppercase mb-2 block">
-          Our Therapies
+          Available Therapies
         </span>
 
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
@@ -94,8 +94,8 @@ useSchemaOrg([
         </h2>
 
         <p class="text-gray-500 text-lg leading-relaxed">
-          We believe every body has a unique story. I listen to your needs to craft a personalized
-          session that addresses your specific physical and emotional goals.
+          Every body has its own unique story and history. I listen to your needs to create a personalised
+          session that addresses your specific physical situation.
         </p>
       </div>
 
