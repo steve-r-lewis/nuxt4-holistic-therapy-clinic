@@ -115,7 +115,8 @@ onUnmounted(() => {
 
           <div class="mt-auto pt-6 border-t border-gray-50">
             <NuxtLink
-              :to="service._path?.replace('/datastore', '') || '/contact'"
+              v-if="t.relatedPost"
+              :to="`/treatments/${t.relatedPost}`"
               class="inline-flex items-center text-brand-purple font-semibold hover:text-brand-purple/80 transition-colors group/link"
             >
               Learn more
