@@ -119,7 +119,7 @@ const sendMessage = async () => {
           rows="4"
           required
           class="w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-purple focus:ring-brand-purple p-3"
-          placeholder="How can we help you?"
+          placeholder="How may I help you?"
         ></textarea>
       </div>
       <button
@@ -134,7 +134,7 @@ const sendMessage = async () => {
     </form>
 
     <div class="mt-12 text-center text-sm text-gray-500">
-      <p>Sunnybank, Westray</p>
+      <p>Skelwick, Westray</p>
       <p class="mt-1">{{ config.public.contactEmail }} • +44 7775 991523</p>
     </div>
   </div>

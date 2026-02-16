@@ -15,9 +15,7 @@
     { "label": "Privacy Policy", "to": "/privacy" }
   ],
   "socials": [
-    { "icon": "lucide:instagram", "link": "#", "label": "Instagram" },
-    { "icon": "lucide:facebook", "link": "#", "label": "Facebook" },
-    { "icon": "lucide:twitter", "link": "#", "label": "Twitter" }
+    { "icon": "lucide:facebook", "link": "https://www.facebook.com/profile.php?id=61586260844675", "label": "Facebook" }
   ],
   "copyrightText": "Holistic Therapy Clinic. All rights reserved."
 }
