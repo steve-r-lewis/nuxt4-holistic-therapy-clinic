@@ -28,7 +28,7 @@
  * ================================================================================
  */
 
-import ServiceCarousel from '../components/ServiceCarousel';
+import ServiceCarousel from "../components/shared/ServiceCarousel.vue";
 
 const siteConfig = useSiteConfig();
 
