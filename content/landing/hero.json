@@ -1,9 +1,9 @@
 {
-  "badge": "Holistic Wellness Center",
+  "badge": "Holistic Therapy Clinic",
   "title": "Restore Balance to Body & Mind",
   "description": "I offer a range of professional massage disciplines completely tailored to the individual. By bridging the gap among restorative relaxation, clinical, and remedial massage, I provide targeted treatments that deliver tangible physical results..",
   "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  "imageAlt": "Relaxing Massage Therapy Setting",
+  "imageAlt": "Restorative Massage Therapy Clinic",
   "promo": {
     "badge": "New Clients",
     "text": "Free consultation included",
@@ -20,16 +20,15 @@
       "title": "Pain Relief",
       "text": "Targeted therapies to release tension and chronic muscle pain.",
       "icon": "lucide:activity"
+    },{
+      "title": "Restore Mobility",
+      "text": "Release deep muscle tension to restore your full range of motion.",
+      "icon": "lucide:activity"
     },
     {
-      "title": "Energy Balance",
-      "text": "Realign your body’s natural energy flow for holistic wellness.",
-      "icon": "lucide:sun"
-    },
-    {
-      "title": "Natural Healing",
-      "text": "Promoting recovery through organic and non-invasive methods.",
-      "icon": "lucide:leaf"
+      "title": "Active Recovery",
+      "text": "Stimulate blood flow to aid your body’s natural repair process.",
+      "icon": "lucide:heart-pulse"
     }
   ]
 }
