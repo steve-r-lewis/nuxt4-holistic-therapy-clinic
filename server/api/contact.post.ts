@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
       user: config.zohoUser,
       pass: config.zohoPassword
     }
-  })
+  });
 
   // 4. Prepare Email 1: Notification to Admin (You)
   const adminMailOptions = {
@@ -65,7 +65,7 @@ export default defineEventHandler(async (event) => {
       <p><strong>Message:</strong></p>
       <p>${message.replace(/\n/g, '<br>')}</p>
     `
-  }
+  };
 
   // 5. Prepare Email 2: Confirmation to User
   const userMailOptions = {
@@ -81,7 +81,7 @@ export default defineEventHandler(async (event) => {
       <p>Best regards,</p>
       <p><strong>Holistic Therapy Clinic</strong></p>
     `
-  }
+  };
 
   // 6. Send Emails
   try {
@@ -89,7 +89,7 @@ export default defineEventHandler(async (event) => {
     await Promise.all([
       transporter.sendMail(adminMailOptions),
       transporter.sendMail(userMailOptions)
-    ])
+    ]);
 
     return { success: true, message: 'Emails sent successfully' }
   } catch (error: any) {
