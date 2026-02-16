@@ -32,11 +32,6 @@ import ServiceCarousel from "../components/shared/ServiceCarousel.vue";
 
 const siteConfig = useSiteConfig();
 
-// 1. Fetch Dynamic Content (Limit to 4 items for the homepage grid)
-// const { data: homeTreatments } = await useAsyncData('home-treatments', () =>
-//   queryCollection('therapies').limit(4).all()
-// );
-
 // 1. Fetch Dynamic Content
 // CHANGED: Removed .limit(4) to allow all therapies to be loaded for the carousel
 const { data: homeTreatments } = await useAsyncData('home-treatments', () =>
