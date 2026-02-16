@@ -100,15 +100,6 @@ useSchemaOrg([
       </div>
 
       <div class="text-left mb-8 max-w-3xl mx-auto">
-        <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Advanced Recovery Technology Integrated</span>, where needed to accelerate your results:</p>
-
-        <ul class="text-gray-600 mb-4 leading-relaxed">
-          <li><span class="font-bold">Clinical Ultrasound:</span> Stimulates healing in ligaments, tendons, and muscle fibers.</li>
-          <li><span class="font-bold">Dynamic Cupping:</span> Decompressive suction combined with red light therapy. Improves blood flow and cellular repair.</li>
-          <li><span class="font-bold">Gua Sha:</span> Traditional technique to release deep-seated muscular tension.</li>
-          <li><span class="font-bold">Practical Aftercare:</span> Simple home movements to maintain your progress.</li>
-        </ul>
-
         <p class="text-lg text-gray-600 leading-relaxed">
           <span class="font-bold">📞 Book Your Appointment:</span> <span class="font-bold"><a href="tel:07775991523">07775 991523</a></span> Gift Vouchers & Loyalty Cards Available.
         </p>
