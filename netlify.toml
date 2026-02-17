@@ -1,6 +1,6 @@
 [build]
   command = "pnpm run build"
-  publish = ".output/public"
+  publish = "dist"
 
 [images]
   remote_images = ["https://images.unsplash.com/*"]
