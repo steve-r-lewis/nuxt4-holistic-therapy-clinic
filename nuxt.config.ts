@@ -44,8 +44,7 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   extends: [
-    "@monorepo/ui-library",
-    "@monorepo/uuidv7-generator"
+    "@monorepo/ui-library"
   ],
 
   /**
@@ -82,6 +81,10 @@ export default defineNuxtConfig({
     // Rebuilds in the background once per hour if data changes.
     '/blog/**': { isr: 3600 },
     '/treatments/**': { isr: 3600 },
+
+    // Admin/Account Area: Disable prerendering (Client-side or SSR only)
+    // This prevents build failures due to missing DB access during crawler phase.
+    '/account/**': { prerender: false }
   },
 
   /**
