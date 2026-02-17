@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/pages/index.vue
- * @version:    1.1.0
+ * @version:    1.2.2
  * @createDate: 2026 Jan 22
  * @createTime: 23:54
  * @author:     Steve R Lewis
@@ -18,6 +18,13 @@
  *
  * @notes: Revision History
  *
+ * V1.2.2, 20260216
+ * - FIXED: Restored ServiceCarousel component (was accidentally reverted to grid).
+ * - MAINTAINED: Safety filter for homeTreatments to prevent build errors.
+ *
+ * V1.2.1, 20260216
+ * - FIXED: Added safety filter for homeTreatments to prevent build errors with undefined items.
+ *
  * V1.1.0, 20260216
  * - Removed .limit(4) from therapies query to fetch all services.
  * - Replaced LandingContentGrid with ServiceCarousel to allow scrolling through all services.
@@ -28,15 +35,22 @@
  * ================================================================================
  */
 
+// Explicitly import the component to ensure Vite resolution
 import ServiceCarousel from "../components/shared/ServiceCarousel.vue";
 
 const siteConfig = useSiteConfig();
 
 // 1. Fetch Dynamic Content
-// CHANGED: Removed .limit(4) to allow all therapies to be loaded for the carousel
-const { data: homeTreatments } = await useAsyncData('home-treatments', () =>
+// Fetch ALL therapies (removed limit) so the carousel has data
+const { data: rawHomeTreatments } = await useAsyncData('home-treatments', () =>
   queryCollection('therapies').all()
 );
+
+// [FIX] Safety Filter: Ensure we only pass defined objects to the template
+// This prevents "Cannot read properties of undefined" errors during the build
+const homeTreatments = computed(() => {
+  return rawHomeTreatments.value?.filter((t) => t) || [];
+});
 
 // 2. Advanced SEO Configuration
 useSeoMeta({
@@ -60,7 +74,7 @@ useSchemaOrg([
     telephone: '+44 7775 991523',
     email: 'susan.chinnery@holistictherapyclinic.co.uk',
     address: {
-      streetAddress: 'Sunnybank',
+      streetAddress: 'Skelwick',
       addressLocality: 'Westray',
       addressRegion: 'Orkney',
       postalCode: 'KW17 2DW',
@@ -75,7 +89,7 @@ useSchemaOrg([
       }
     ]
   })
-])
+]);
 </script>
 
 <template>
@@ -109,7 +123,7 @@ useSchemaOrg([
     </section>
 
     <div class="flex flex-col items-center text-center space-y-6 py-12 bg-brand-purple/5 rounded-3xl">
-      <h3 class="text-2xl font-serif font-bold text-gray-900">Ready to prioritise your wellness?</h3>
+      <h3 class="text-2xl font-serif font-bold text-gray-900">Ready to prioritize your wellness?</h3>
       <p class="text-gray-600 max-w-lg">
         Book your appointment today and take the first step towards a balanced, pain-free life.
       </p>
