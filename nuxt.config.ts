@@ -252,7 +252,7 @@ export default defineNuxtConfig({
   nitro: {
     //dev: true,  // Ensure Nitro HMR is active
 
-    //preset: 'netlify',
+    preset: 'netlify',
 
     output: {
       // ensure Nitro writes public files into "public" so Netlify can find .output/public
