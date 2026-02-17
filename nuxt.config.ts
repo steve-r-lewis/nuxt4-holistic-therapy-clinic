@@ -254,6 +254,11 @@ export default defineNuxtConfig({
 
     preset: 'netlify',
 
+    output: {
+      // ensure Nitro writes public files into "public" so Netlify can find .output/public
+      publicDir: 'public'
+    },
+
     prerender: {
       crawlLinks: true,
       failOnError: false,
