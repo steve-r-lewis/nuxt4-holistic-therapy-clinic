@@ -1,0 +1,1 @@
+import{p as r,o as s,g as a,r as o}from"./BAtO23Rx.js";const t={};function n(e,c){return s(),a("thead",null,[o(e.$slots,"default")])}const _=Object.assign(r(t,[["render",n]]),{__name:"ProseThead"});export{_ as default};

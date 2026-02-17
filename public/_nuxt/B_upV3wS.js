@@ -1,0 +1,1 @@
+import{a0 as h,a1 as n,a2 as T}from"./BAtO23Rx.js";const u=c=>{const t=h(),e=n(t.$pinia),{activeThemeId:a,activeThemeData:i,loading:s,error:m,hasActiveTheme:o,activeThemeName:r}=T(e);return{activeThemeId:a,activeThemeData:i,loading:s,error:m,hasActiveTheme:o,activeThemeName:r,setTheme:e.setTheme,clearTheme:e.clearTheme,initialize:e.initialize}};export{u};

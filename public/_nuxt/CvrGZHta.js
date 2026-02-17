@@ -1,0 +1,1 @@
+import{p as r,o as s,g as o,r as n}from"./BAtO23Rx.js";const t={};function a(e,c){return s(),o("ul",null,[n(e.$slots,"default")])}const _=Object.assign(r(t,[["render",a]]),{__name:"ProseUl"});export{_ as default};
