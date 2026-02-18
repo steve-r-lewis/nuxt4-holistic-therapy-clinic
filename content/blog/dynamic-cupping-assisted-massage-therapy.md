@@ -15,7 +15,7 @@ When exploring the history of this therapy, we must look at Traditional Chinese 
 
 While I have immense respect for traditional methods, my practice utilises the latest innovation: Smart Dynamic Cups. These tools create powerful, controlled suction through modern precision engineering. This allows you to receive all the deep-tissue benefits and "debris" clearing of the ancient Chinese practice, but in a way that is both modern and consistent
 
-**The Mechanics: Decompression vs. Compression**
+### **The Mechanics: Decompression vs. Compression**
 
 In traditional massage, we use compression—pushing into the muscle. Cupping does the opposite; it uses negative pressure to lift and separate layers of tissue. This process draws fluid into the treated area, often leaving the signature "mark" caused by the expansion of blood vessels. While it looks intense, this suction is the catalyst for healing.
 
@@ -26,6 +26,8 @@ By lifting the tissue, we create vital space for metabolic waste and "debris" to
 As our scientific understanding of the human body has evolved, so too have the tools we use to treat it. While the foundations of suction therapy are ancient, modern sports science and myofascial research have allowed us to refine these techniques for the modern body.
 
 That is why I offer dynamic cupping—a sophisticated advancement of traditional methods that is integrated seamlessly into my Deep Tissue and Remedial massage treatments. By moving away from static applications toward synchronized suction and release, we can more accurately target the nervous system and the lymphatic pathways. This combination addresses stubborn tension from multiple angles, blending manual muscle work with the unique decompressing power of dynamic suction.
+
+![Picture of the cupping technique being used](/images/cupping/cups-x2)
 
 ## **The Dynamic Advantage**
 
