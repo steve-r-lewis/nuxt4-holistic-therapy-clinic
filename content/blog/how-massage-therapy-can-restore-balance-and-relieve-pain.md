@@ -30,6 +30,10 @@ A massage therapist doesn't just rub away the pain; they interrupt those alarm s
 
 ![Massage promoting image depicting the idea of central nervous system.](/images/massage/the-reset-image.png)
 
+<p align="center">
+  <img src="/images/massage/the-reset-image.png"  alt="Massage promoting image depicting the idea of central nervous system."/>
+</p>
+
 ## **What to Expect After the "Reset"**
 
 Because massage flushes out toxins and forces muscles to change shape, you might feel a healing response for a day or two afterward:
