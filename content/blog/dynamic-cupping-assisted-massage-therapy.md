@@ -27,7 +27,9 @@ As our scientific understanding of the human body has evolved, so too have the t
 
 That is why I offer dynamic cupping—a sophisticated advancement of traditional methods that is integrated seamlessly into my Deep Tissue and Remedial massage treatments. By moving away from static applications toward synchronized suction and release, we can more accurately target the nervous system and the lymphatic pathways. This combination addresses stubborn tension from multiple angles, blending manual muscle work with the unique decompressing power of dynamic suction.
 
-![Picture of the cupping technique being used](/images/cupping/cups-x2.jpg)
+<p align="center">
+  <img src="/images/cupping/cups-x2.jpg"  alt="Picture of the cupping technique being used."/>
+</p>
 
 ## **The Dynamic Advantage**
 
