@@ -17,7 +17,9 @@ Your Central Nervous System (the brain and spine) is like a 24/7 security guard.
 
 That "tight" feeling isn't just a physical knot; it’s an emergency response telling you to move out of your fixed position or repetitive movement and move toward a place of ease.
 
-![Massage promoting image depicting the idea of a body reset therapy process.](/images/massage/the-cns-image.png)
+<p align="center">
+  <img src="/images/massage/the-cns-image.png"  alt="Massage promoting image depicting the idea of central nervous system."/>
+</p>
 
 ## **How Massage "Talks" to Your Brain**
 
@@ -28,10 +30,8 @@ A massage therapist doesn't just rub away the pain; they interrupt those alarm s
 * **Nature’s WD-40:** Massage encourages your joints to produce synovial fluid. This lubricates your "mechanical" parts so you can move without that rusty creaking feeling.  
 * **Better Blood Flow:** By clearing out waste products like lactic acid and bringing in fresh oxygen, massage helps your muscles repair the micro-tears caused by daily stress.
 
-![Massage promoting image depicting the idea of central nervous system.](/images/massage/the-reset-image.png)
-
 <p align="center">
-  <img src="/images/massage/the-reset-image.png"  alt="Massage promoting image depicting the idea of central nervous system."/>
+  <img src="/images/massage/the-reset-image.png"  alt="Massage promoting image depicting the idea of a body reset therapy process."/>
 </p>
 
 ## **What to Expect After the "Reset"**
