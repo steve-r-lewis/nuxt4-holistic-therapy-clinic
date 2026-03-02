@@ -7,7 +7,7 @@ image: '/images/blogs/what-is-fascia/purple-fascia-menu-graphic.webp'
 
 # **What is Fascia**
 
-Think of Fascia as a silver, three-dimensional web that wraps around every muscle, bone, and organ in your body. It consists of specialised cells swimming in a fluid called the "Extracellular Matrix"—mostly collagen and water. This system is so vital that without it, we would literally be a blog on the floor\!
+Think of Fascia, as a three-dimensional web that wraps around every muscle, bone, and organ in your body. It consists of specialised cells swimming in a fluid called the "Extracellular Matrix"—mostly collagen and water. This system is so vital that without it, we would literally be a blob on the floor\!
 
 In a healthy body, this web is hydrated and slippery, allowing your muscles and organs to glide smoothly and friction-free. But when life happens, that "glide" can turn into "stick."
 
