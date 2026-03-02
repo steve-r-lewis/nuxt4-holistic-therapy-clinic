@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/components/layout/SiteHeader.vue
- * @version:    1.2.0
+ * @version:    1.2.1
  * @createDate: 2026 Jan 22
  * @createTime: 23:21
  * @author:     Steve R Lewis
@@ -17,6 +17,9 @@
  * ================================================================================
  *
  * @notes: Revision History
+ *
+ * V1.2.1, 20260302
+ * - FIXED: Hydration mismatch caused by invalid HTML nesting (div inside button).
  *
  * V1.2.0, 20260212
  * - Changed breakpoint from md (768px) to lg (1024px) to better support landscape phones.
@@ -53,7 +56,7 @@ watch(isMobileMenuOpen, (isOpen) => {
   }
 });
 
-// NEW (Correct for Data Files)
+// Fetch header data
 const { data: header } = await useAsyncData('site-header', () =>
   queryCollection('layout').where('stem', '=', 'layout/header').first()
 );
@@ -100,7 +103,7 @@ const { data: header } = await useAsyncData('site-header', () =>
           class="lg:hidden relative z-50 p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
           aria-label="Toggle mobile menu"
         >
-          <div class="w-6 h-6 flex flex-col justify-center gap-1.5">
+          <span class="w-6 h-6 flex flex-col justify-center gap-1.5">
             <span
               class="block h-0.5 w-6 bg-current transition-all duration-300"
               :class="{ 'rotate-45 translate-y-2': isMobileMenuOpen }"
@@ -113,7 +116,7 @@ const { data: header } = await useAsyncData('site-header', () =>
               class="block h-0.5 w-6 bg-current transition-all duration-300"
               :class="{ '-rotate-45 -translate-y-2': isMobileMenuOpen }"
             ></span>
-          </div>
+          </span>
         </button>
       </div>
     </div>

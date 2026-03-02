@@ -4,7 +4,7 @@
  *
  * @project:    nuxt4-holistic-therapy-clinic
  * @file:       ~app/components/layout/SiteFooter.vue
- * @version:    1.0.0
+ * @version:    1.0.1
  * @createDate: 2026 Jan 22
  * @createTime: 23:46
  * @author:     Steve R Lewis
@@ -17,6 +17,9 @@
  * ================================================================================
  *
  * @notes: Revision History
+ *
+ * V1.0.1, 20260302
+ * - FIXED: Added data-allow-mismatch to Date generator to prevent hydration errors.
  *
  * V1.0.0, 20260122-23:46
  * Initial creation and release of SiteFooter.vue
@@ -72,7 +75,7 @@ const { data: footer } = await useAsyncData('site-footer', () =>
         />
 
         <p class="text-sm text-gray-400">
-          © {{ currentYear }} {{ footer.copyrightText }}
+          © <span data-allow-mismatch>{{ currentYear }}</span> {{ footer.copyrightText }}
         </p>
       </div>
     </div>
