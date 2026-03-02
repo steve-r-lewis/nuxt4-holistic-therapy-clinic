@@ -36,14 +36,9 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
 
 <template>
   <div class="max-w-4xl mx-auto px-6 pt-4 pb-12">
-    <h1 class="text-4xl font-serif font-bold text-gray-900 mb-6">Our Treatments</h1>
-
-    <p class="text-gray-600 mb-12 leading-relaxed">
-      Each session is tailored to your specific needs. We recommend arriving 15 minutes early
-      to discuss your goals with your therapist.
-    </p>
-
     <div class="text-left mb-8 max-w-3xl mx-auto">
+      <h1 class="text-4xl font-serif font-bold text-gray-900 mb-6">Your Treatments</h1>
+
       <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Additional Therapy Technologies </span>, integrated where needed to accelerate your results:
       </p>
 
