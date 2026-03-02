@@ -79,8 +79,8 @@ export default defineNuxtConfig({
 
     // Blog & Treatments: Use ISR (Incremental Static Regeneration)
     // Rebuilds in the background once per hour if data changes.
-    '/blog/**': { isr: 3600 },
-    '/treatments/**': { isr: 3600 },
+    '/blog/**': { prerender: true },
+    '/treatments/**': { prerender: true },
 
     // Admin/Account Area: Disable prerendering (Client-side or SSR only)
     // This prevents build failures due to missing DB access during crawler phase.
