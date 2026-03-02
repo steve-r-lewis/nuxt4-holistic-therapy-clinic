@@ -44,7 +44,8 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
     </p>
 
     <div class="text-left mb-8 max-w-3xl mx-auto">
-      <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Additional Therapy Technologies </span>, integrated where needed to accelerate your results:</p>
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed"><span class="font-bold">Additional Therapy Technologies </span>, integrated where needed to accelerate your results:
+      </p>
 
       <ul class="text-gray-600 mb-4 leading-relaxed">
         <li><span class="font-bold">Clinical Ultrasound:</span> Stimulates healing in ligaments, tendons, and muscle fibers.</li>
@@ -55,6 +56,36 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
 
       <p class="text-lg text-gray-600 leading-relaxed">
         <span class="font-bold">📞 Book Your Appointment:</span> <span class="font-bold"><a href="tel:07775991523">07775 991523</a></span> Gift Vouchers & Loyalty Cards Available.
+      </p>
+    </div>
+
+    <div class="text-center mb-8 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-600 leading-relaxed pb-2">
+        <span class="font-bold">Appointment Times</span>
+      </p>
+
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        Monday, Wednesday, Thursday, Friday
+      </p>
+
+      <ul class="text-gray-600 mb-4 leading-relaxed py-2">
+        <li>9:00</li>
+        <li>11:00</li>
+        <li>14:00</li>
+        <li>16:00</li>
+        <li>Last app  7:00PM</li>
+      </ul>
+
+      <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+        Tuesday – Home Visit Appointments Available
+      </p>
+
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Professional therapeutic massage treatments in the comfort of your own home
+      </p>
+
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Saturday 09:00 & 11:00
       </p>
     </div>
 

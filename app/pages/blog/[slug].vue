@@ -38,7 +38,7 @@ if (!post.value) {
 }
 
 // 2. Get Site URL
-const siteConfig = useSiteConfig()
+const siteConfig = useSiteConfig();
 const siteUrl = siteConfig.url || 'https://holistictherapyclinic.co.uk';
 
 // 3. Compute Absolute Image URL

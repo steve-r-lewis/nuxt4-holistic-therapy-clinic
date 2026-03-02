@@ -2,7 +2,7 @@
 title: 'The Restorative Benefits of Massage Therapy'
 date: 'feb 5, 2026'
 excerpt: 'How this gentle technique can boost your immune system.'
-image: '/images/massage/massage-therapy-001.jpg'
+image: '/images/blogs/massage/massage-therapy-001.webp'
 ---
 
 # **Why Your Body Gets "Stuck" (And How Massage Resets the System)**
@@ -18,7 +18,7 @@ Your Central Nervous System (the brain and spine) is like a 24/7 security guard.
 That "tight" feeling isn't just a physical knot; it’s an emergency response telling you to move out of your fixed position or repetitive movement and move toward a place of ease.
 
 <p align="center">
-  <img src="/images/massage/the-cns-image.png"  alt="Massage promoting image depicting the idea of central nervous system."/>
+  <img src="/images/blogs/how-massage-resets-the-body/the-cns-image.webp"  alt="Massage promoting image depicting the idea of central nervous system."/>
 </p>
 
 ## **How Massage "Talks" to Your Brain**
@@ -31,7 +31,7 @@ A massage therapist doesn't just rub away the pain; they interrupt those alarm s
 * **Better Blood Flow:** By clearing out waste products like lactic acid and bringing in fresh oxygen, massage helps your muscles repair the micro-tears caused by daily stress.
 
 <p align="center">
-  <img src="/images/massage/the-reset-image.png"  alt="Massage promoting image depicting the idea of a body reset therapy process."/>
+  <img src="/images/blogs/how-massage-resets-the-body/the-reset-image.webp"  alt="Massage promoting image depicting the idea of a body reset therapy process."/>
 </p>
 
 ## **What to Expect After the "Reset"**

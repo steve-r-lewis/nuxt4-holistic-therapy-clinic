@@ -2,7 +2,7 @@
 title: 'Gua Sha Assisted Soft Tissue Mobilization'
 date: 'Feb 12 2026'
 excerpt: 'Relaxes the mind and body and promotes overall well-being.'
-image: '/images/gua-sha/gua-sha-assisted-soft-tissue-mobilization.png'
+image: '/images/blogs/gua-sha/gua-sha.webp'
 ---
 
 # **Beyond the Glow: Why I Incorporate Gua Sha into Your Treatments**
