@@ -1,6 +1,6 @@
 ---
-title: 'Deep Neck, Face and Scalp massage'
-date: 'mar 01, 2026'
+title: 'Advanced Neck, Face and Scalp massage'
+date: 'mar 02, 2026'
 excerpt: 'The Science of Sculpting: How Deep Facial Massage Works.'
 image: '/images/blogs/face/face-massage-01.webp'
 ---
