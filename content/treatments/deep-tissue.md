@@ -2,7 +2,7 @@
 title: 'Deep Tissue Treatment'
 date: 'Jan 01 2026'
 excerpt: 'Targeted work to release chronic muscle tension, stiffness, and fatigue caused by physical work or repetitive activity'
-image: ''
+image: '/images/therapies/deep-tissue-massage.webp'
 ---
 
 # **Deep Tissue Treatment** 

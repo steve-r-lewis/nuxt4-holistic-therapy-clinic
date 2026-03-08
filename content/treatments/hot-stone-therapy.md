@@ -2,7 +2,7 @@
 title: 'Hot Stone Massage'
 date: 'Jan 01 2026'
 excerpt: 'This comprehensive full-body treatment (excluding the face)'
-image: ''
+image: '/images/therapies/hot-stones-massage.webp'
 ---
 
 # **Hot Stone Full Body Massage 🌿**
