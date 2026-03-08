@@ -1,11 +1,11 @@
 ---
-title: 'Massage, a Natural Anti-Depression'
+title: 'Massage, a Natural Anti-Depressant'
 date: 'mar 08, 2026'
 excerpt: 'Getting a massage isn’t just about working out those stubborn knots in your shoulders.'
 image: '/images/blogs/massage-a-natural-antidepressant/lifting-depression.webp'
 ---
 
-# **Massage, a Natural Anti-Depression**
+# **Massage, a Natural Anti-Depressant**
 
 Getting a massage isn’t just about working out those stubborn knots in your shoulders. It is actually one of the most effective ways to boost your mood and support your mental health naturally. This isn't just about feeling relaxed for an hour—there is profound science behind how touch transforms the brain.
 
