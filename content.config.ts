@@ -23,7 +23,6 @@
  * ================================================================================
  */
 
-// content.config.ts
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
 export default defineContentConfig({
@@ -31,7 +30,6 @@ export default defineContentConfig({
     blog: defineCollection({
       source: 'blog/*.md',
       type: 'page',
-      // [NEW] Define schema to include optional image
       schema: z.object({
         title: z.string(),
         date: z.string(),
@@ -40,7 +38,6 @@ export default defineContentConfig({
       })
     }),
 
-    // [EXISTING] Your JSON Price List
     therapies: defineCollection({
       source: 'datastore/therapies/*.json',
       type: 'data',
@@ -49,26 +46,22 @@ export default defineContentConfig({
         duration: z.string(),
         price: z.string(),
         desc: z.string(),
-        // [NEW] Optional link to the detail page (e.g., 'swedish-massage')
         relatedPost: z.string().optional()
       })
     }),
 
-    // [NEW] The Detailed Pages
     treatments: defineCollection({
-      source: 'treatments/*.md', // Looks for files in content/treatments/
+      source: 'treatments/*.md',
       type: 'page',
       schema: z.object({
         title: z.string(),
         description: z.string(),
-        // [NEW] Optional image for the detail page
         image: z.string().optional()
       })
     }),
 
-    // [NEW] Add this Landing collection
     landing: defineCollection({
-      type: 'data', // 'data' type is perfect for JSON singleton files
+      type: 'data',
       source: 'landing/*.json',
       schema: z.object({
         badge: z.string(),
@@ -90,7 +83,6 @@ export default defineContentConfig({
       })
     }),
 
-    // [NEW] FAQ Collection
     faq: defineCollection({
       type: 'data',
       source: 'landing/faq.json',
@@ -118,14 +110,12 @@ export default defineContentConfig({
           label: z.string(),
           to: z.string()
         })),
-        // [NEW] Additions for Footer
         socials: z.array(z.object({
           icon: z.string(),
           link: z.string(),
           label: z.string()
         })).optional(),
         copyrightText: z.string().optional(),
-        // [Existing]
         cta: z.object({
           label: z.string(),
           to: z.string(),

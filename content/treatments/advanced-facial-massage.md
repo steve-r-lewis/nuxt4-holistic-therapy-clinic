@@ -1,5 +1,5 @@
 ---
-title: 'Advanced Face massage'
+title: 'Advanced Face Massage'
 date: 'mar 02, 2026'
 excerpt: 'A high-performance manual face massage therapy.'
 image: '/images/therapies/advanced-facial-massage.webp'
