@@ -85,7 +85,6 @@ useSchemaOrg([
       <h1 class="text-4xl font-serif font-bold text-gray-900 leading-tight">
         {{ page.title }}
       </h1>
-      <p class="text-gray-500 mt-4 text-lg">{{ page.description }}</p>
     </header>
 
     <div class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center">
