@@ -1,8 +1,8 @@
 ---
-title: 'Advanced Face Massage'
+title: 'Therapeutic Facial Massage'
 date: 'mar 02, 2026'
 excerpt: 'A high-performance manual face massage therapy.'
-image: '/images/therapies/advanced-facial-massage.webp'
+image: '/images/therapies/therapeutic-facial-massage.webp'
 ---
 
 This is not a traditional spa facial. It is a high-performance manual therapy.  
