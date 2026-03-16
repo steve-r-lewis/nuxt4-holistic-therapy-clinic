@@ -30,12 +30,12 @@ import { defineNuxtConfig } from 'nuxt/config'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-10-08',
+  compatibilityDate: "2025-10-08",
   devtools: { enabled: true },
 
   devServer: {
-    host: '127.0.0.1',
-    port: 3000
+    host: "127.0.0.1",
+    port: 3000,
   },
 
   /**
@@ -43,9 +43,7 @@ export default defineNuxtConfig({
    * @EXTENDS:
    * ------------------------------------------------------------------------------
    */
-  extends: [
-    "@monorepo/ui-library"
-  ],
+  extends: ["@monorepo/ui-library"],
 
   /**
    * ------------------------------------------------------------------------------
@@ -53,12 +51,12 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   modules: [
-    '@pinia/nuxt',
-    '@nuxt/icon',
-    '@nuxt/content',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxtjs/seo'
+    "@pinia/nuxt",
+    "@nuxt/icon",
+    "@nuxt/content",
+    "@nuxt/fonts",
+    "@nuxt/image",
+    "@nuxtjs/seo",
   ],
 
   /**
@@ -68,23 +66,23 @@ export default defineNuxtConfig({
    */
   routeRules: {
     // Homepage & Static Pages: Pre-render content at build time (Instant Load)
-    '/': { prerender: true },
-    '/about': { prerender: true },
-    '/therapies': { prerender: true },
-    '/contact': { prerender: true },
-    '/blog': { prerender: true },
+    "/": { prerender: true },
+    "/about": { prerender: true },
+    "/therapies": { prerender: true },
+    "/contact": { prerender: true },
+    "/blog": { prerender: true },
 
-    '/sitemap.xml': { prerender: true },
-    '/robots.txt': { prerender: true },
+    "/sitemap.xml": { prerender: true },
+    "/robots.txt": { prerender: true },
 
     // Blog & Treatments: Use ISR (Incremental Static Regeneration)
     // Rebuilds in the background once per hour if data changes.
-    '/blog/**': { prerender: true },
-    '/treatments/**': { prerender: true },
+    "/blog/**": { prerender: true },
+    "/treatments/**": { prerender: true },
 
     // Admin/Account Area: Disable prerendering (Client-side or SSR only)
     // This prevents build failures due to missing DB access during crawler phase.
-    '/account/**': { prerender: false }
+    "/account/**": { prerender: false },
   },
 
   /**
@@ -93,9 +91,9 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   image: {
-    domains: ['images.unsplash.com'],
-    format: ['webp'],
-    quality: 80,      // Good balance of size/quality
+    domains: ["images.unsplash.com"],
+    format: ["webp"],
+    quality: 80, // Good balance of size/quality
     // If using local images in /public, no provider needed.
     // If using external images (like from a CMS), add domains here.
   },
@@ -108,9 +106,9 @@ export default defineNuxtConfig({
   // [NEW] Font Optimization (Fixes Layout Shift)
   fonts: {
     families: [
-      { name: 'Playfair Display', provider: 'google' },
-      { name: 'Lato', provider: 'google' }
-    ]
+      { name: "Playfair Display", provider: "google" },
+      { name: "Lato", provider: "google" },
+    ],
   },
 
   /**
@@ -120,10 +118,12 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://holistictherapyclinic.co.uk',
-    name: 'Holistic Therapy Clinic',
-    description: 'Professional holistic treatments including Swedish Massage, Deep Tissue, and Aromatherapy in Westray.',
-    defaultLocale: 'en-GB',
+    url:
+      process.env.NUXT_PUBLIC_SITE_URL || "https://holistictherapyclinic.co.uk",
+    name: "Holistic Therapy Clinic",
+    description:
+      "Professional holistic treatments including Swedish Massage, Deep Tissue, and Aromatherapy in Westray.",
+    defaultLocale: "en-GB",
   },
 
   /**
@@ -134,12 +134,12 @@ export default defineNuxtConfig({
   robots: {
     // 1. Explicitly point to the manual file we created
     // The module will automatically prepend your site.url (https://holistictherapyclinic.co.uk)
-    sitemap: '/sitemap.xml',
+    sitemap: "/sitemap.xml",
 
     // 2. Define Rules
     // We allow Google to crawl everything.
     // Note: We do NOT disallow /_nuxt/ because Google needs to load JS to render your page correctly.
-    allow: '/',
+    allow: "/",
 
     // Optional: If you had private pages, you would list them here.
     // disallow: ['/api/', '/admin/'],
@@ -151,12 +151,13 @@ export default defineNuxtConfig({
    * Connects to the server API to find your SQL content pages
    * ------------------------------------------------------------------------------
    */
-  sitemap: {// Force the module to look at the exact IPv4 address
+  sitemap: {
+    // Force the module to look at the exact IPv4 address
     // sources: [
     //   '/api/sitemap'
     // ],
     enabled: false,
-    debug: true // This will log sitemap errors to your terminal
+    debug: true, // This will log sitemap errors to your terminal
   },
 
   /**
@@ -164,16 +165,14 @@ export default defineNuxtConfig({
    * @NUXT-PLUGINS:
    * ------------------------------------------------------------------------------
    */
-  plugins: [
-  ],
+  plugins: [],
 
   /**
    * ------------------------------------------------------------------------------
    * @AUTO-IMPORT-DIRECTORIES:
    * ------------------------------------------------------------------------------
    */
-  imports: {
-  },
+  imports: {},
 
   /**
    * ------------------------------------------------------------------------------
@@ -183,8 +182,8 @@ export default defineNuxtConfig({
   content: {
     // Content module configuration
     database: {
-      type: 'sqlite' // Nuxt 4 recommended database
-    }
+      type: "sqlite", // Nuxt 4 recommended database
+    },
   },
 
   /**
@@ -193,11 +192,11 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   icon: {
-    size: '24',
-    class: 'inline-block',
-    serverBundle: 'remote',
-    provider: 'iconify',
-    collections: [] // explicitly prevent auto-discovery
+    size: "24",
+    class: "inline-block",
+    serverBundle: "remote",
+    provider: "iconify",
+    collections: [], // explicitly prevent auto-discovery
   },
 
   /**
@@ -205,13 +204,12 @@ export default defineNuxtConfig({
    * @OPTIONAL: alias for Layer
    * ------------------------------------------------------------------------------
    */
-  alias: {
-  },
+  alias: {},
 
   // Disable sourcemaps for server and client
   sourcemap: {
     server: false,
-    client: false
+    client: false,
   },
 
   /**
@@ -222,26 +220,30 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       // tsconfigPaths(), // Keep if needed for root
-      tailwindcss()
+      tailwindcss(),
     ],
+
+    optimizeDeps: {
+      include: ["@vue/devtools-core", "@vue/devtools-kit"],
+    },
 
     server: {
       hmr: {
-        port: 3000,        // Pin to main port (avoids random ports like 24678 that fail intermittently)
-        host: '127.0.0.1', // Force IPv4 (macOS/Windows often defaults to IPv6, causing mismatches)
-        protocol: 'ws',    // Explicit WebSocket protocol for stability
-        timeout: 30000,    // Bump from default 10s to prevent idle disconnects
-        overlay: true,     // Enable error overlay for debugging HMR fails
+        port: 3000, // Pin to main port (avoids random ports like 24678 that fail intermittently)
+        host: "127.0.0.1", // Force IPv4 (macOS/Windows often defaults to IPv6, causing mismatches)
+        protocol: "ws", // Explicit WebSocket protocol for stability
+        timeout: 30000, // Bump from default 10s to prevent idle disconnects
+        overlay: true, // Enable error overlay for debugging HMR fails
       },
     },
 
     css: {
-      devSourcemap: true // Debug CSS issues
+      devSourcemap: true, // Debug CSS issues
     },
 
     build: {
-      cssMinify: true // Minify CSS in production
-    }
+      cssMinify: true, // Minify CSS in production
+    },
   },
 
   /**
@@ -252,40 +254,40 @@ export default defineNuxtConfig({
   nitro: {
     //dev: true,  // Ensure Nitro HMR is active
 
-    preset: 'netlify',
+    preset: "netlify",
 
     output: {
       // ensure Nitro writes public files into "public" so Netlify can find .output/public
       // Also ensure Netlify build and deploy settings are correct.
-      publicDir: '.output/public'
+      publicDir: ".output/public",
     },
 
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml'],
+      routes: ["/sitemap.xml"],
       failOnError: false,
     },
 
     routeRules: {
       // Aggressively cache static documents (like your PDF) for 1 year
-      '/documents/**': {
+      "/documents/**": {
         headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
-        }
+          "Cache-Control": "public, max-age=31536000, immutable",
+        },
       },
       // It's also best practice to do the same for public images
-      '/images/**': {
+      "/images/**": {
         headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
-        }
+          "Cache-Control": "public, max-age=31536000, immutable",
+        },
       },
       // And standard Nuxt build assets
-      '/_nuxt/**': {
+      "/_nuxt/**": {
         headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable'
-        }
-      }
-    }
+          "Cache-Control": "public, max-age=31536000, immutable",
+        },
+      },
+    },
   },
 
   /**
@@ -324,8 +326,9 @@ export default defineNuxtConfig({
 
     // Public keys (Client-side)
     public: {
-      contactEmail: process.env.ZOHO_EMAIL || 'susan.chinnery@holistictherapyclinic.co.uk'
-    }
+      contactEmail:
+        process.env.ZOHO_EMAIL || "susan.chinnery@holistictherapyclinic.co.uk",
+    },
   },
 
   /**
@@ -334,8 +337,7 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   development: {
-    runtimeConfig: {
-    },
+    runtimeConfig: {},
   },
 
   /**
@@ -344,7 +346,6 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   production: {
-    runtimeConfig: {
-    },
-  }
+    runtimeConfig: {},
+  },
 });
