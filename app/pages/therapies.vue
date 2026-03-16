@@ -86,7 +86,7 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
 
     <div class="flex justify-center pt-6 pb-8">
       <a
-        href="/documents/a5-price-list-version-01.pdf"
+        href="/documents/a5-price-list-version-02.pdf"
         download="Holistic-Therapy-Clinic-Prices.pdf"
         target="_blank"
         class="inline-flex items-center justify-center gap-2 bg-brand-purple text-white px-6 py-3 rounded-full text-sm font-medium shadow-md hover:opacity-90 hover:shadow-lg transition cursor-pointer"
