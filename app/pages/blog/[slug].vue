@@ -26,27 +26,36 @@
 
 const route = useRoute();
 
+// 1. Normalize the path (strip any trailing slashes injected by Netlify/browsers)
+const cleanPath = route.path.replace(/\/$/, '');
+
+// 2. Fetch the specific post using the cleaned path
+const { data: post, status } = await useAsyncData(`post-${cleanPath}`, () =>
+  queryCollection('blog').path(cleanPath).first()
+);
+
 // 1. Fetch the specific post
 // We define the variable as 'post'
-const { data: post, status } = await useAsyncData(route.path, () =>
-  queryCollection('blog').path(route.path).first()
-);
+// const { data: post, status } = await useAsyncData(route.path, () =>
+//   queryCollection('blog').path(route.path).first()
+// );
 
 // [FIX] Changed 'page' to 'post'
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 }
 
-// 2. Get Site URL
+
+// 3. Get Site URL
 const siteConfig = useSiteConfig();
 const siteUrl = siteConfig.url || 'https://holistictherapyclinic.co.uk';
 
-// 3. Compute Absolute Image URL
+// 4. Compute Absolute Image URL
 // [FIX] Changed 'page' to 'post'
 const relativeImage = post.value.image || '/logo.png';
 const socialImage = `${siteUrl}${relativeImage}`;
 
-// 4. SEO Metadata
+// 5. SEO Metadata
 useSeoMeta({
   // [FIX] Changed 'page' to 'post' everywhere below
   title: `${post.value.title} | Holistic Therapy Clinic`,
@@ -66,7 +75,7 @@ useSeoMeta({
   twitterImage: socialImage
 });
 
-// 5. Structured Data
+// 6. Structured Data
 useSchemaOrg([
   defineArticle({
     // [FIX] Changed 'page' to 'post'
