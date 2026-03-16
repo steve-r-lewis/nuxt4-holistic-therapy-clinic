@@ -264,6 +264,27 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/sitemap.xml'],
       failOnError: false,
+    },
+
+    routeRules: {
+      // Aggressively cache static documents (like your PDF) for 1 year
+      '/documents/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      },
+      // It's also best practice to do the same for public images
+      '/images/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      },
+      // And standard Nuxt build assets
+      '/_nuxt/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      }
     }
   },
 

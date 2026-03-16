@@ -84,6 +84,18 @@ const { data: treatments } = await useAsyncData('therapy-list', () =>
       </p>
     </div>
 
+    <div>
+      <a
+        href="/documents/a5-price-list-version-01.pdf"
+        download="Holistic-Therapy-Clinic-Prices.pdf"
+        target="_blank"
+        class="inline-flex items-center justify-center gap-2 bg-brand-purple text-white px-6 py-3 rounded-full text-sm font-medium shadow-md hover:opacity-90 hover:shadow-lg transition cursor-pointer"
+      >
+        <Icon name="lucide:file-down" class="w-5 h-5" />
+        Download Price List (PDF)
+      </a>
+    </div>
+
     <div class="grid gap-6" v-if="treatments">
       <template v-for="t in treatments" :key="t.id">
 
