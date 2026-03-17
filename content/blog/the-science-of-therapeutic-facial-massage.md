@@ -41,7 +41,7 @@ Recent research has demonstrated the profound importance of cervical lymphatic d
 The evidence for masseter muscle massage is particularly strong. A randomised controlled trial on 82 women with tight jaw disorders found that massage combined with therapeutic exercises was the most effective treatment approach, superior to post-isometric relaxation and exercise alone. After just one treatment, pain scores dropped significantly, and by day seven, mean pain scores were nearly eliminated. Surface muscle activity confirmed significant reductions in masseter muscle tension, while ultrasound imaging showed an 85% reduction in fluid pockets and tender muscle knots.
 
 <p align="center">
-  <img src="/images/blogs/the-science-of-therapeutic-facial-massage/massetter-muscle.webp"  alt="An image showing the massetter muscle."/>
+  <img src="/images/blogs/the-science-of-therapeutic-facial-massage/massetter-muscle-v1.0.webp"  alt="An image showing the massetter muscle."/>
 </p>
 
 **Posture and Alignment**  
