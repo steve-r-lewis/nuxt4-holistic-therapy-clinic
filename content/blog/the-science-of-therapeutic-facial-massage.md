@@ -69,15 +69,18 @@ At its core, this approach is about structural balance. We aren't just rubbing t
 
 ## **References**
 
-Calvo-Muñoz, I., et al. (2024). "Effects of different manual therapy techniques on pain and pressure pain threshold in patients with myofascial trigger points in the masseter muscle: A randomized controlled trial." *Journal of Bodywork and Movement Therapies*. <https://www.sciencedirect.com/science/article/pii/S1360859224002024>
+Gomes, C.A.F.P., El Hage, Y., Amaral, A.P., Politti, F., Biasotto-Gonzalez, D.A. and Oliveira, C.S. (2023) ‘Evaluation of the efficacy of manual soft tissue therapy and therapeutic exercises in patients with pain and limited mobility of the temporomandibular joint: A randomized controlled trial’, *Healthcare*, 11(17), p. 2362. Available at: [https://pmc.ncbi.nlm.nih.gov/articles/PMC10486124/](https://pmc.ncbi.nlm.nih.gov/articles/PMC10486124/) (Accessed: 17 March 2026).
 
-Ajimsha, M.S., et al. (2015). "Effectiveness of Myofascial Release in the Management of Lateral Epicondylitis in Computer Professionals." *Archives of Physical Medicine and Rehabilitation*. <https://www.researchgate.net/publication/263168754_Effectiveness_of_Myofascial_Release_in_the_Management_of_Lateral_Epicondylitis_in_Computer_Professionals_A_Protocol>
+Ajimsha, M.S., Al-Mudahka, N.R. and Al-Madzhar, J.A. (2015) ‘Effectiveness of myofascial release: Systematic review of randomized controlled trials’, *Journal of Bodywork and Movement Therapies*, 19(1), pp. 102–112. Available at: [https://pubmed.ncbi.nlm.nih.gov/25603749/](https://pubmed.ncbi.nlm.nih.gov/25603749/) (Accessed: 17 March 2026).
 
-Calvo-Muñoz, I., et al. (2021). "Effects of myofascial release on pressure pain thresholds in patients with myofascial trigger points in the masseter muscle." *Journal of Bodywork and Movement Therapies*. <https://www.sciencedirect.com/science/article/pii/S1360859221003428>
+Khoo Massage Therapies (no date) ‘TMJ intra-oral massage vs Botox: Why hands-on treatment gives you better results’. Available at: [https://www.khoomassagetherapies.com/post/tmj-intra-oral-massage-vs-botox-why-hands-on-treatment-gives-you-better-results](https://www.khoomassagetherapies.com/post/tmj-intra-oral-massage-vs-botox-why-hands-on-treatment-gives-you-better-results) (Accessed: 17 March 2026).
 
-Stecco, C., & Schleip, R. (2016). "A fascia and the fascial system." *Journal of Bodywork and Movement Therapies*. <https://www.researchgate.net/publication/309130808_A_fascia_and_the_fascial_system>
 
-The Jackson Laboratory (2025). "New study reveals how gentle stimulation of neck and face lymphatics can double brain drainage in aged mice." *Nature*. <https://medicalxpress.com/news/2025-01-reveals-gentle-neck-lymphatics-drainage.html>
+O’Brien Physical Therapy (no date) ‘The science behind myofascial release techniques’. Available at: [https://www.obrienphysicaltherapy.net/blog/the-science-behind-myofascial-release-techniques](https://www.obrienphysicaltherapy.net/blog/the-science-behind-myofascial-release-techniques) (Accessed: 17 March 2026).
 
-Chao, P.H., et al. (2010). "Effects of frequency and magnitude of mechanical strain on collagen production by human dermal fibroblasts." *Journal of Biomechanics*. <https://www.researchgate.net/publication/44689978_Effects_of_frequency_and_magnitude_of_mechanical_strains_on_collagen_production_by_human_dermal_fibroblasts_In_The_Role_of_Intracellular_Calcium>
+
+Neuroscience News (2024) ‘Facial stimulation may enhance glymphatic system function’. Available at: [https://neurosciencenews.com/facial-stimulation-glymphatic-29213/](https://neurosciencenews.com/facial-stimulation-glymphatic-29213/) (Accessed: 17 March 2026).
+
+
+
 
