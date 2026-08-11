@@ -91,7 +91,7 @@ useSchemaOrg([
       <NuxtImg
         v-if="displayImage"
         :src="displayImage"
-        :alt="page.title"
+        :alt="page.imageAlt || page.title"
         format="webp"
         loading="lazy"
         sizes="100vw sm:50vw md:33vw"

@@ -41,7 +41,6 @@
  * ================================================================================
  */
 
-import tsconfigPaths from 'vite-tsconfig-paths';
 import { createResolver } from '@nuxt/kit';
 const { resolve } = createResolver(import.meta.url);
 
@@ -52,19 +51,4 @@ export default defineNuxtConfig({
 	css: [
 		resolve('./assets/css/main.css')
 	],
-
-	vite: {
-		plugins: [
-			tsconfigPaths()
-		],
-
-		// Optional but recommended configs
-		css: {
-			devSourcemap: true
-		},
-
-		build: {
-			cssMinify: true
-		}
-	},
 });

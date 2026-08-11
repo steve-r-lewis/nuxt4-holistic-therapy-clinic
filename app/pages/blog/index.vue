@@ -79,7 +79,7 @@ const formatDate = (dateString: string) => {
           <NuxtImg
             v-if="post.image"
             :src="post.image"
-            :alt="post.title"
+            :alt="post.imageAlt || post.title"
             format="webp"
             loading="lazy"
             sizes="100vw sm:50vw md:33vw"

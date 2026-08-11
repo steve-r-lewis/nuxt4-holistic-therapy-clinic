@@ -40,8 +40,7 @@ This is why you instinctively rub your elbow after bumping it—the pressure cre
 **4\. Muscle Tone and Tension Release.** By addressing areas of increased muscular tension or "guarding," massage can improve range of motion, reduce discomfort, and enhance body awareness. When a muscle is no longer stuck in a state of chronic contraction, local metabolic waste (like lactic acid) can be cleared more naturally by your own blood flow.
 
 <p align="center">
-  <img src="/images/blogs/massage-and-detoxification-what-science-actually-shows/substances-released-during-massage.webp"  alt="Key Physiological Substances Affected by Massage
-"/>
+  <img src="/images/blogs/massage-and-detoxification-what-science-actually-shows/substances-released-during-massage.webp"  alt="Key Physiological Substances Affected by Massage"/>
 </p>
 
 ## **Lymphatic Drainage: A Special Case**

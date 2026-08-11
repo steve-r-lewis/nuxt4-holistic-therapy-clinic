@@ -14,5 +14,3 @@
   # Extends timeout for complex Nitro/SQLite initializations
   node_bundler = "esbuild"
   external_node_modules = ["better-sqlite3"]
-
-

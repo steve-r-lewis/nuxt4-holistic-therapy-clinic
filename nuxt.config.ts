@@ -53,10 +53,10 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@nuxt/icon",
+    "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxt/fonts",
-    "@nuxt/image",
-    "@nuxtjs/seo",
+    "@nuxt/image"
   ],
 
   /**
@@ -194,9 +194,21 @@ export default defineNuxtConfig({
   icon: {
     size: "24",
     class: "inline-block",
-    serverBundle: "remote",
+    serverBundle: "local",
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 256,
+      // These four only exist in Nuxt Content JSON data (content/landing/hero.json,
+      // content/layout/footer.json), not in .vue source — scan can't discover them.
+      // Add any new content-driven icon names here.
+      icons: [
+        "lucide:facebook",
+        "lucide:waves",
+        "lucide:activity",
+        "lucide:heart-pulse",
+      ],
+    },
     provider: "iconify",
-    collections: [], // explicitly prevent auto-discovery
   },
 
   /**
@@ -218,8 +230,11 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------------------------
    */
   vite: {
+    resolve: {
+      tsconfigPaths: true,
+    },
+
     plugins: [
-      // tsconfigPaths(), // Keep if needed for root
       tailwindcss(),
     ],
 
@@ -323,6 +338,8 @@ export default defineNuxtConfig({
     zohoSmtpSecure: process.env.ZOHO_SMTP_SERVER_SECURITY,
     zohoUser: process.env.ZOHO_EMAIL,
     zohoPassword: process.env.ZOHO_PASSWORD,
+
+    // NuxtOgImageSecret: process.env.NUXT_OG_IMAGE_SECRET,
 
     // Public keys (Client-side)
     public: {

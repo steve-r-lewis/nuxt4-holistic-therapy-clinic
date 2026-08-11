@@ -108,7 +108,7 @@ useSchemaOrg([
       <div v-if="post.image" class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-100">
         <NuxtImg
           :src="post.image"
-          :alt="post.title"
+          :alt="post.imageAlt || post.title"
           format="webp"
           loading="eager"
           class="w-full h-full object-cover"

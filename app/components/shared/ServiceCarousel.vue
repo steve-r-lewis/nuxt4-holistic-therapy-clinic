@@ -123,6 +123,7 @@ onUnmounted(() => {
               class="inline-flex items-center text-brand-purple font-semibold hover:text-brand-purple/80 transition-colors group/link"
             >
               Learn more
+              <span class="sr-only"> about {{ service.name }}</span>
               <Icon name="lucide:arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
             </NuxtLink>
           </div>
