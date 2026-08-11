@@ -1,12 +1,12 @@
 [build]
-  command = "free -h && ulimit -a && NODE_OPTIONS=--no-deprecation ./node_modules/.bin/nuxt build --verbose; code=$?; echo \"RAW_EXIT_CODE=$code\"; exit $code"
+  command = "pnpm build"
   publish = ".output/public"
 
 [images]
   remote_images = ["https://images.unsplash.com/*"]
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "26.5.0"
   # Required for pnpm stability on Netlify
   PNPM_FLAGS = "--shamefully-hoist"
 
