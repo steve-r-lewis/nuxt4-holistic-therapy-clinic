@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm run build"
+  command = "free -h && ulimit -a && NODE_OPTIONS=--no-deprecation ./node_modules/.bin/nuxt build --verbose; code=$?; echo \"RAW_EXIT_CODE=$code\"; exit $code"
   publish = ".output/public"
 
 [images]
