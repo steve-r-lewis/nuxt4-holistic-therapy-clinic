@@ -43,7 +43,7 @@
   "scripts": {
     "appTools": "tsx scripts/tui/app.ts",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation nuxt dev --force",
-    "build": "cross-env NODE_OPTIONS=--no-deprecation nuxt build --verbose",
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=2048\" nuxt build --verbose",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
