@@ -11,17 +11,15 @@ Highly focused treatment for specific conditions such as Frozen Shoulder, Tennis
 
 ---
 
-## **Additional Techniques**
+**Additional Techniques**
 
-### **GUA SHA & IASTM (Instrument-assisted soft tissue manipulation)**
-
+GUA SHA & IASTM (Instrument-assisted soft tissue manipulation)  
 Integrated, where needed, in a treatment to accelerate your results  
-
 Releases deep-seated myofascial tension, improves circulation and lymphatic drainage, whilst reducing muscle tension.
 
 ---
 
-### **Therapeutic Ultrasound**
+**Therapeutic Ultrasound**
 
 Integrated, where needed in a treatment, to accelerate your results  
 
@@ -29,7 +27,7 @@ Using sound waves to create gentle heat deep within the tissue, ultrasound stimu
 
 ---
 
-### **Dynamic Cupping with Red Light Therapy**
+**Dynamic Cupping with Red Light Therapy**
 
 Integrated, where needed in a treatment, to accelerate your results. Combining rhythmic suction with Infrared light, this treatment decompresses tight fascia and boosts circulation.  
 
