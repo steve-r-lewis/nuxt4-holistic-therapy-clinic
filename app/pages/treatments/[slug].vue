@@ -78,6 +78,44 @@ useSchemaOrg([
 ])
 </script>
 
+<!--<template>-->
+<!--  <div class="max-w-4xl mx-auto px-6 py-12" v-if="page">-->
+
+<!--    <header class="mb-10 text-center">-->
+<!--      <h1 class="text-4xl font-serif font-bold text-gray-900 leading-tight">-->
+<!--        {{ page.title }}-->
+<!--      </h1>-->
+<!--    </header>-->
+
+<!--    <div class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center">-->
+<!--      <NuxtImg-->
+<!--        v-if="displayImage"-->
+<!--        :src="displayImage"-->
+<!--        :alt="page.imageAlt || page.title"-->
+<!--        format="webp"-->
+<!--        loading="lazy"-->
+<!--        sizes="100vw sm:50vw md:33vw"-->
+<!--        class="w-full h-full object-cover group-hover:scale-105 transition duration-500"-->
+<!--        :class="isFallback ? 'object-contain p-12 opacity-50' : 'object-cover'"-->
+<!--      />-->
+<!--    </div>-->
+
+<!--    <article class="prose prose-lg prose-gray max-w-none hover:prose-a:text-brand-purple">-->
+<!--      <ContentRenderer :value="page" />-->
+<!--    </article>-->
+
+<!--    <div class="mt-12 pt-8 border-t border-gray-100 text-center">-->
+<!--      <NuxtLink-->
+<!--        to="/therapies"-->
+<!--        class="py-2 text-sm font-bold text-brand-purple hover:underline"-->
+<!--        aria-label="Return to the list of treatments and services"-->
+<!--      >-->
+<!--        ← Back to Treatments-->
+<!--      </NuxtLink>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</template>-->
+
 <template>
   <div class="max-w-4xl mx-auto px-6 py-12" v-if="page">
 
@@ -87,7 +125,7 @@ useSchemaOrg([
       </h1>
     </header>
 
-    <div class="aspect-video rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center">
+    <div class="rounded-xl mb-12 w-full overflow-hidden shadow-sm bg-gray-50 flex items-center justify-center">
       <NuxtImg
         v-if="displayImage"
         :src="displayImage"
@@ -95,8 +133,8 @@ useSchemaOrg([
         format="webp"
         loading="lazy"
         sizes="100vw sm:50vw md:33vw"
-        class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-        :class="isFallback ? 'object-contain p-12 opacity-50' : 'object-cover'"
+        class="w-full group-hover:scale-105 transition duration-500"
+        :class="isFallback ? 'h-auto object-contain p-12 opacity-50' : 'h-auto object-contain'"
       />
     </div>
 

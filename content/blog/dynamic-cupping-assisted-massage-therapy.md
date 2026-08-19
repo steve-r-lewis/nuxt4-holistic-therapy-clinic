@@ -2,7 +2,7 @@
 title: 'Dynamic Cupping Assisted Massage Therapy'
 date: 'Jan 22 2026'
 excerpt: 'Cupping assisted massage therapy'
-image: '/images/blogs/cupping/cups-on-mans-back.webp'
+image: '/images/blogs/dynamic-cupping-assisted-massage-therapy/cups-on-mans-back.webp'
 ---
 
 # **From Ancient Ritual to Modern Recovery: The Evolution of Cupping**
@@ -28,7 +28,7 @@ As our scientific understanding of the human body has evolved, so too have the t
 That is why I offer dynamic cupping—a sophisticated advancement of traditional methods that is integrated seamlessly into my Deep Tissue and Remedial massage treatments. By moving away from static applications toward synchronized suction and release, we can more accurately target the nervous system and the lymphatic pathways. This combination addresses stubborn tension from multiple angles, blending manual muscle work with the unique decompressing power of dynamic suction.
 
 <p align="center">
-  <img src="/images/blogs/cupping/cups-on-mans-back-flat.webp"  alt="Picture of the cupping technique being used."/>
+  <img src="/images/blogs/dynamic-cupping-assisted-massage-therapy/cups-on-mans-back-flat.webp"  alt="Picture of the cupping technique being used."/>
 </p>
 
 ## **The Dynamic Advantage**

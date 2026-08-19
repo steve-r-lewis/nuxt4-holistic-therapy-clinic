@@ -13,15 +13,11 @@ Highly focused treatment for specific conditions such as Frozen Shoulder, Tennis
 
 ## **Additional Techniques**
 
-### **Gua Sha**
+### **GUA SHA & IASTM (Instrument-assisted soft tissue manipulation)**
 
 Integrated, where needed, in a treatment to accelerate your results  
 
 Releases deep-seated myofascial tension, improves circulation and lymphatic drainage, whilst reducing muscle tension.
-
-#### **Longer Description:**
-
-**Gua Sha & IASTM** (Instrument-assisted soft tissue manipulation)
 
 ---
 
