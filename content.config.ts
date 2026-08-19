@@ -32,7 +32,8 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
-        date: z.string(),
+        date: z.string().datetime(),
+        changefreq: z.enum(['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never']).default('yearly'),
         excerpt: z.string(),
         image: z.string().optional(),
         imageAlt: z.string().optional()

@@ -1,6 +1,7 @@
 ---
 title: 'What is Fascia?'
-date: 'mar 02 2026'
+date: '2026-03-02T12:09:03Z'
+changefreq: 'yearly'
 excerpt: 'Think of Fascia as a silver, three-dimensional web that wraps around every muscle, bone, and organ in your body'
 image: '/images/blogs/what-is-fascia/purple-fascia-menu-graphic.webp'
 ---

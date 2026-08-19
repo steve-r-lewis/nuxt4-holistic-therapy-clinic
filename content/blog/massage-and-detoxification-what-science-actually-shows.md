@@ -1,6 +1,7 @@
 ---
 title: 'What Science Reveals About Massage and Detoxification'
-date: 'apr 29, 2026'
+date: '2026-04-29T21:30:10Z'
+changefreq: 'yearly'
 excerpt: 'The Truth About Massage and Detoxification: What Science Actually Shows'
 image: '/images/blogs/massage-and-detoxification-what-science-actually-shows/detox-plate.webp'
 ---

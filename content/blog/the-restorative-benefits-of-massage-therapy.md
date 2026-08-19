@@ -1,6 +1,7 @@
 ---
 title: 'The Restorative Benefits of Massage Therapy'
-date: 'feb 5, 2026'
+date: '2026-02-05T15:44:11Z'
+changefreq: 'yearly'
 excerpt: 'How this gentle technique can boost your immune system.'
 image: '/images/blogs/the-restorative-benefits-of-massage-therapy/header-massage-therapy.webp'
 ---

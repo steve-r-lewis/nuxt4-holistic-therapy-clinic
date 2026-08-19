@@ -1,6 +1,7 @@
 ---
 title: 'Massage, a Natural Anti-Depressant'
-date: 'mar 08, 2026'
+date: '2026-03-08T16:05:42Z'
+changefreq: 'yearly'
 excerpt: 'Getting a massage isn’t just about working out those stubborn knots in your shoulders.'
 image: '/images/blogs/massage-a-natural-antidepressant/lifting-depression.webp'
 ---
