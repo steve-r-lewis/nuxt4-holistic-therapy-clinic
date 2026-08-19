@@ -1,6 +1,5 @@
 ---
 title: 'The Unwind Full Body'
-date: 'Jan 01 2026'
 excerpt: 'Designed to calm the nervous system, reduce physical stress, and support better sleep patterns'
 image: '/images/therapies/the-unwind-full-body.webp'
 ---

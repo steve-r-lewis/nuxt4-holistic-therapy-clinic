@@ -1,6 +1,5 @@
 ---
 title: 'Seated Chair Massage'
-date: 'Jan 01 2026'
 excerpt: 'An alternative to a treatment on a massage table.'
 image: '/images/therapies/seated-chair-massage.webp'
 ---

@@ -156,7 +156,7 @@ export default defineNuxtConfig({
     // sources: [
     //   '/api/sitemap'
     // ],
-    enabled: false,
+    enabled: true,
     debug: true, // This will log sitemap errors to your terminal
     // Explicitly define the Nitro route as a dynamic data source
   },

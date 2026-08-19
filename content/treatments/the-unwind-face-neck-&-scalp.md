@@ -1,6 +1,5 @@
 ---
 title: 'The Unwind: Face, Neck & Scalp'
-date: 'mar 02, 2026'
 excerpt: 'A high-performance manual face massage therapy.'
 image: '/images/therapies/the-unwind-face-neck-and-scalp.webp'
 ---

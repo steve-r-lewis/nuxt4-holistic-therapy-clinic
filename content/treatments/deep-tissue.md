@@ -1,6 +1,5 @@
 ---
 title: 'Deep Tissue Treatment'
-date: 'Jan 01 2026'
 excerpt: 'Targeted work to release chronic muscle tension, stiffness, and fatigue caused by physical work or repetitive activity'
 image: '/images/therapies/deep-tissue-massage.webp'
 imageAlt: 'Therapist applying firm pressure to a clients upper back during a deep tissue massage'

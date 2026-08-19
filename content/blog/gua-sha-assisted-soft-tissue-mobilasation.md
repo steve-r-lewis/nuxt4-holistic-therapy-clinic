@@ -1,8 +1,9 @@
 ---
 title: 'Gua Sha Assisted Soft Tissue Mobilization'
+date: '2026-02-12T09:45:00Z'
 excerpt: 'Relaxes the mind and body and promotes overall well-being.'
 image: '/images/blogs/gua-sha-assisted-soft-tissue-mobilasation/gua-sha.webp'
-_sitemap:
+sitemap:
   lastmod: '2026-02-12T09:45:00Z'
   changefreq: 'yearly'
 ---

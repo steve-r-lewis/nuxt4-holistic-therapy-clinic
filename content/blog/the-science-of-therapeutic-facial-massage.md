@@ -1,8 +1,9 @@
 ---
 title: 'The Science of Deep Facial Myofascial Work'
+date: '2026-03-16T19:27:36.900Z'
 excerpt: 'Deep facial work offers significant functional benefits'
 image: '/images/blogs/the-science-of-therapeutic-facial-massage/stone-face.webp'
-_sitemap:
+sitemap:
   lastmod: '2026-03-16T19:27:36.900Z'
   changefreq: 'yearly'
 ---

@@ -1,8 +1,9 @@
 ---
 title: 'Massage, a Natural Anti-Depressant'
+date: '2026-03-08T16:05:42.900Z'
 excerpt: 'Getting a massage isn’t just about working out those stubborn knots in your shoulders.'
 image: '/images/blogs/massage-a-natural-antidepressant/lifting-depression.webp'
-_sitemap:
+sitemap:
   lastmod: '2026-03-08T16:05:42.900Z'
   changefreq: 'yearly'
 ---

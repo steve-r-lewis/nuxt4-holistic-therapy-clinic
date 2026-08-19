@@ -24,6 +24,7 @@
  */
 
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { defineSitemapSchema } from '@nuxtjs/seo/content'
 
 export default defineContentConfig({
   collections: {
@@ -33,13 +34,11 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
+        date: z.string().datetime(),
         excerpt: z.string(),
         image: z.string().optional(),
         imageAlt: z.string().optional(),
-        _sitemap: z.object({
-          lastmod: z.string().datetime(),
-          changefreq: z.enum(['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never']).default('yearly')
-        })
+        sitemap: defineSitemapSchema()
       })
     }),
 
@@ -60,7 +59,7 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
-        description: z.string(),
+        excerpt: z.string(),
         image: z.string().optional(),
         imageAlt: z.string().optional()
       })
