@@ -1,6 +1,6 @@
 ---
 title: 'Three Muscles That Secretly Run Your Posture'
-date: '2026-08-11T20:18:49Z'
+date: '2026-08-11T20:18:49.900.900Z'
 changefreq: 'yearly'
 excerpt: 'Your shoulder is more complex than just the ball-and-socket joint.'
 image: '/images/blogs/three-muscles-that-secretly-run-your-posture/header-image-for-post-whole-body.webp'

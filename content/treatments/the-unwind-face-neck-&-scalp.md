@@ -19,4 +19,3 @@ Please arrive with a clean, make-up-free face so the treatment can begin straigh
 
 **60 minutes of uninterrupted time for your face, neck and scalp.**
 
----

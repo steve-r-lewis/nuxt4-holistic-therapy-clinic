@@ -1,6 +1,6 @@
 ---
 title: 'Muscle Knots (Trigger Points) and Adhesions'
-date: '2026-03-23T10:22:08Z'
+date: '2026-03-23T10:22:08.900Z'
 changefreq: 'yearly'
 excerpt: 'This article explains how muscle knots and adhesions form and how to treat them.'
 image: '/images/blogs/muscle-knots-trigger-points-and-adhesions/man-with-bad-back.webp'
