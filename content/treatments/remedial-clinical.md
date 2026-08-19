@@ -5,7 +5,6 @@ excerpt: 'Highly focused treatment for specific conditions such as Frozen Should
 image: '/images/therapies/remedial-clinical-massage.webp'
 ---
 
-# **Remedial & Clinical Treatment**
 
 Highly focused treatment for specific conditions such as Frozen Shoulder, Tennis Elbow, Plantar Fasciitis, or repetitive strain injuries.
 

@@ -1,10 +1,11 @@
 ---
 title: 'Menopausal Musculoskeletal Syndrome'
-date: '2026-08-19T18:01:55.900Z'
-changefreq: 'yearly'
 excerpt: 'Menopausal Musculoskeletal Syndrome: Why Does Everything Suddenly Hurt?'
 image: '/images/blogs/menopausal-musculoskeletal-syndrome-why-does-everything-suddenly-hurt/header-menopausal-musculoskeletal-syndrome.webp'
 imageAlt: 'Seated older woman holding her shoulder, expressing physical discomfort.'
+_sitemap:
+  lastmod: '2026-08-19T18:01:55.900Z'
+  changefreq: 'yearly'
 ---
 
 # **Menopausal Musculoskeletal Syndrome: Why Does Everything Suddenly Hurt?**

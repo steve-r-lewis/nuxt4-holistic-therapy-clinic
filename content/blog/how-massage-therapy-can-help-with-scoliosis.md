@@ -1,9 +1,10 @@
 ---
 title: 'How Massage Therapy Can Help with Scoliosis'
-date: '2026-08-11T11:12:33.900Z'
-changefreq: 'yearly'
 excerpt: 'Living with scoliosis often means dealing with uneven muscle tension.'
 image: '/images/blogs/how-massage-therapy-can-help-with-scoliosis/header-scoliosis.webp'
+_sitemap:
+  lastmod: '2026-08-11T11:12:33.900Z'
+  changefreq: 'yearly'
 ---
 
 # How Massage Therapy Can Help with Scoliosis

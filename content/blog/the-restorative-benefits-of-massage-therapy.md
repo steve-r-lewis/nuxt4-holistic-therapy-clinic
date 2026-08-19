@@ -1,9 +1,10 @@
 ---
 title: 'The Restorative Benefits of Massage Therapy'
-date: '2026-02-05T15:44:11.900Z'
-changefreq: 'yearly'
 excerpt: 'How this gentle technique can boost your immune system.'
 image: '/images/blogs/the-restorative-benefits-of-massage-therapy/header-massage-therapy.webp'
+_sitemap:
+  lastmod: '2026-02-05T15:44:11.900Z'
+  changefreq: 'yearly'
 ---
 
 # **Why Your Body Gets "Stuck" (And How Massage Resets the System)**

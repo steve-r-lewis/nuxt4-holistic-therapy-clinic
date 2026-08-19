@@ -5,8 +5,6 @@ excerpt: 'A high-performance manual face massage therapy.'
 image: '/images/therapies/the-unwind-face-neck-and-scalp.webp'
 ---
 
-# **The Unwind: Face, Neck & Scalp**
-
 **A 60-minute face, neck and scalp massage designed to promote relaxation while easing tension where you need it most.**
 
 The treatment begins with gentle manual lymphatic drainage, followed by massage to the neck and face using a botanical facial blend of jojoba and carefully selected wild-harvested essential oils.

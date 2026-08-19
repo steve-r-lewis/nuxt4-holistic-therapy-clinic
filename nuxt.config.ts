@@ -159,13 +159,6 @@ export default defineNuxtConfig({
     enabled: false,
     debug: true, // This will log sitemap errors to your terminal
     // Explicitly define the Nitro route as a dynamic data source
-
-    // Isolate the blog paths from the native crawler
-    exclude: ['/blog/**'],
-    // Explicitly define the Nitro route as the sole data source for these paths
-    sources: [
-      '/api/sitemap-blog'
-    ]
   },
 
   /**

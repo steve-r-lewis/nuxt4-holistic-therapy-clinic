@@ -1,9 +1,10 @@
 ---
 title: 'The Benefits of Deep Tissue Massage'
-date: '2026-06-19T13:55:20.900Z'
-changefreq: 'yearly'
 excerpt: 'Understand the clinical mechanics of deep tissue massage. Learn how this therapeutic technique targets musculoskeletal adhesions to alleviate pain and accelerate recovery.'
 image: '/images/blogs/the-benefits-of-deep-tissue-massage/deep-tissue.webp'
+_sitemap:
+  lastmod: '2026-06-19T13:55:20.900Z'
+  changefreq: 'yearly'
 ---
 
 # **What Is Deep Tissue Massage?**

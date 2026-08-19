@@ -1,10 +1,13 @@
 ---
 title: 'Dynamic Cupping Assisted Massage Therapy'
-date: '2026-01-22T14:23:15.900Z'
-changefreq: 'yearly'
 excerpt: 'Cupping assisted massage therapy'
 image: '/images/blogs/dynamic-cupping-assisted-massage-therapy/cups-on-mans-back.webp'
+_sitemap:
+  lastmod: '2026-01-22T14:23:15.900Z'
+  changefreq: 'yearly'
 ---
+
+# **From Ancient Ritual to Modern Recovery: The Evolution of Cupping**
 
 # **From Ancient Ritual to Modern Recovery: The Evolution of Cupping**
 
