@@ -6,8 +6,6 @@ image: '/images/blogs/dynamic-cupping-assisted-massage-therapy/cups-on-mans-back
 sitemap:
   lastmod: '2026-01-22T14:23:15Z'
   changefreq: 'yearly'
-
-
 ---
 
 # **From Ancient Ritual to Modern Recovery: The Evolution of Cupping**

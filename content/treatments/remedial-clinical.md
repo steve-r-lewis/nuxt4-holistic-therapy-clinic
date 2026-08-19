@@ -1,7 +1,11 @@
 ---
 title: 'Remedial & Clinical Treatment'
+date: '2026-01-22T14:23:15Z'
 excerpt: 'Highly focused treatment for specific conditions such as Frozen Shoulder, Tennis Elbow, Plantar Fasciitis, or repetitive strain injuries'
 image: '/images/therapies/remedial-clinical-massage.webp'
+sitemap:
+  lastmod: '2026-01-22T14:23:15Z'
+  changefreq: 'yearly'
 ---
 
 

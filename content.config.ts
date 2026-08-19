@@ -59,9 +59,11 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
+        date: z.string().datetime(),
         excerpt: z.string(),
         image: z.string().optional(),
-        imageAlt: z.string().optional()
+        imageAlt: z.string().optional(),
+        sitemap: defineSitemapSchema()
       })
     }),
 

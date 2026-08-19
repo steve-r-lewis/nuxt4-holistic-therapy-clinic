@@ -1,7 +1,11 @@
 ---
 title: 'The Unwind Full Body'
+date: '2026-01-22T14:23:15Z'
 excerpt: 'Designed to calm the nervous system, reduce physical stress, and support better sleep patterns'
 image: '/images/therapies/the-unwind-full-body.webp'
+sitemap:
+  lastmod: '2026-01-22T14:23:15Z'
+  changefreq: 'yearly'
 ---
 
 A gentle, flowing full-body massage for when you need to slow down and unwind.

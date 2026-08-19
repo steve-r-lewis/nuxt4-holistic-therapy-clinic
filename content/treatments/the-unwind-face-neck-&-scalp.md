@@ -1,7 +1,11 @@
 ---
 title: 'The Unwind: Face, Neck & Scalp'
+date: '2026-01-22T14:23:15Z'
 excerpt: 'A high-performance manual face massage therapy.'
 image: '/images/therapies/the-unwind-face-neck-and-scalp.webp'
+sitemap:
+  lastmod: '2026-01-22T14:23:15Z'
+  changefreq: 'yearly'
 ---
 
 **A 60-minute face, neck and scalp massage designed to promote relaxation while easing tension where you need it most.**
