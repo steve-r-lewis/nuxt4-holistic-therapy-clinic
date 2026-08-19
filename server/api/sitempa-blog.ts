@@ -10,12 +10,14 @@ export default defineEventHandler(async (event) => {
 
   // Map the internal schema to the sitemap module schema
   return articles.map((article) => {
+    // Enforce absolute W3C Datetime compliance, bypassing module heuristics
+    const strictDate = new Date(article.date).toISOString()
+
     return {
       loc: article.path,
-      // Forces the use of the Zod-validated ISO 8601 string
-      lastmod: article.date,
-      // Forces the use of the custom frontmatter attribute
-      changefreq: article.changefreq
+      lastmod: strictDate,
+      // Fallback to 'yearly' if the frontmatter parser fails to map the Zod schema
+      changefreq: article.changefreq || 'yearly'
     }
   })
 })
