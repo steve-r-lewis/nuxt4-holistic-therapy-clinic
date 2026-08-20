@@ -8,8 +8,6 @@ sitemap:
   changefreq: 'yearly'
 ---
 
-# **Hot Stone Full Body Massage 🌿**
-
 I am now offering a new blended approach to Hot Stone massage designed for those seeking a smooth, complete relaxation experience.
 
 By combining deep heat with a manual massage, this treatment ensures the body settles into a state of relaxation without sudden changes in temperature or pressure. This warm and soothing treatment combines the therapeutic benefits of hot stones with a rich, luxurious orange massage wax, infused with the comforting aromas of spices and citrus.
